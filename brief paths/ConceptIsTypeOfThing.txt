@@ -1,0 +1,11 @@
+E55.Type--(P127B.has_narrower_term)[0,n] -> E55.Type:
+{E55.Type --P2B.is_type_of->E70.Thing: 
+{E70.Thing --  (F4B.is_component_of)[0,n] -> E70.Thing}  
+OR 
+E55.Type-- F17B.Material_in_Thing-> E70.Thing:
+{E70.Thing --  (F4B.is_component_of)[0,n] -> E70.Thing  } 
+OR
+E57.Material--P2B.is_type_of -> E3.Condition_State:
+   { E3.Condition_State -- (P5B.forms_part_of)[0,n] -> E3.Condition_State: 
+   { E3.Condition_State --P44B.is_condition_of -> E70.Thing: 
+   {E70.Thing -- (F4B.is_component_of)[0,n] -> E70.Thing  } }}} 

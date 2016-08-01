@@ -1,0 +1,1 @@
+E70.Thing -- F6F.has_location ->E53.Place  

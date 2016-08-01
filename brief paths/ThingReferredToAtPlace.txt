@@ -1,0 +1,7 @@
+E70.Thing --  (F4B.is_component_of)[0,n] -> E70.Thing: 
+{E70.Thing -- F15B.is_referred_to_by -> E70.Thing:
+{E70.Thing--F6F.has_location->E53.Place
+}
+OR
+E70.Thing -- F10F.Thing_createdIn_Event->E5.Event:
+{E5.Event--F12F.Event_from_Place->E53.Place}}

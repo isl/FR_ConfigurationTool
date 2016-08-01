@@ -1,0 +1,1 @@
+E70.Thing -- F9F.Thing_from_Actor -> E39.Actor

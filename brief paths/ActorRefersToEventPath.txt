@@ -1,0 +1,12 @@
+E39.Actor--F13B.Actor_performed_Event->E5.Event:
+{E7.Activity -- (P9F.consists_of)[0,n]-> E7.Activity:
+{E7.Activity--P92F.brought_into_existence -> E70.Thing:
+{E70.Thing --(F5F.consists_of_shows_features_of)[0,n]-> E70.Thing:
+{E24.Physical_Man-Made_Thing -- F15F.refers_to ->E5.Event:
+{E5.Event-- (P9F.consists_of)[0,n]->E5.Event}}}
+OR
+D2.Digitization_Process -- L1F.digitized ->E70.Thing:
+{E70.Thing --(F5F.consists_of_shows_features_of)[0,n]-> E70.Thing:
+{E24.Physical_Man-Made_Thing -- F15F.refers_to ->E5.Event:
+{E5.Event-- (P9F.consists_of)[0,n]->E5.Event 
+}}}}}

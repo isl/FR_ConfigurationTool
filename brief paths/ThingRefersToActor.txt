@@ -1,0 +1,14 @@
+E70.Thing --(F5F.consists_of_shows_features_of)[0,n]-> E70.Thing:
+{E70.Thing -- F15F.refers_to -> E39.Actor:
+{E39.Actor -- ( P107F.has_current_or_former_member) [0,n] -> E39.Actor  
+}
+OR 
+D1.Digital_Object -- L11B.was_output_of -> D7.Digital_Machine_Event:
+{D7.Digital_Machine_Event --(P9B.forms_part_of)[0,n] -> D2.Digitization_Process : 
+{
+D2.Digitization_Process -- L1F.digitized ->E39.Actor
+OR
+D2.Digitization_Process -- L1F.digitized ->E70.Thing:
+{E70.Thing -- F15F.refers_to -> E39.Actor:
+{E39.Actor -- (P107F.has_current_or_former_member) [0,n] -> E39.Actor  
+}}}} }	

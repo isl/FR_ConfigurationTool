@@ -1,0 +1,7 @@
+{E53.Place--F8B.Place_Hosts_Thing-> E53.Place
+OR
+E53.Place--(P89B.contains) [0,n]  -> E53.Place:
+{E53.Place --P7B.witnessed->E5.Event:
+{E5.Event-- F18B.Event_P31_P16_P39_P92_Thing-> E70.Thing
+}}
+}

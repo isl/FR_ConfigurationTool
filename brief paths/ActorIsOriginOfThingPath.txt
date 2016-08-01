@@ -1,0 +1,1 @@
+E39.Actor--F9B.Actor_is_origin_of_Thing->E70.Thing

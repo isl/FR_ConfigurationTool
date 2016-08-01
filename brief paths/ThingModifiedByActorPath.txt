@@ -1,0 +1,4 @@
+E18.Physical_Thing--(P46F.is_composed_of)[0,n]->E24.Physical_Man-Made_Thing:
+	{E24.Physical_Man-Made_Thing--P31B.was_modified_by->E11.Modification:
+{E7.Activity -- F13F.Event_by_Actor  -> E39.Actor
+}}

@@ -1,0 +1,12 @@
+E53.Place -- (P89F.falls_within)[0,n]-> E53.Place:
+{E53.Place--F15B.is_referred_to_by  -> E70.Thing:
+{E70.Thing
+OR
+E70.Thing --(P148B.is_component_of)[0,n]-> E70.Thing
+OR
+E24.Physical_Man-Made_Thing -- L1B.was_digitized_by-> D2.Digitization_Process:
+{D2.Digitization_Process--( P9F.consists_of)[0,n]-> D7.Digital_Machine_Event:
+{D7.Digital_Machine_Event-- L11F.had_output-> E70.Thing:
+{E70.Thing--(F5B.forms_part_of_shows_features_of)[0,n]-> E70.Thing   
+}}}}
+}

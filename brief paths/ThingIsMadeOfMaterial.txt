@@ -1,0 +1,1 @@
+E70.Thing --F17F.Thing_is_made_of_Material-> E55.Type

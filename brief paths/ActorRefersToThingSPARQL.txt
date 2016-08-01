@@ -1,0 +1,27 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E39.Actor.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }
+{
+{$StartVar  crm:F13B.Actor_performed_Event $var4.}
+UNION{$StartVar  crm:F13B.Actor_performed_Event $tempvar5.$tempvar5 crm:P9F.consists_of $var4.}
+{ $var4 crm:P92F.brought_into_existence $var5.}
+UNION{ $var4 crm:P92F.brought_into_existence $tempvar6.$tempvar6 crm:F5F.consists_of_shows_features_of $var5.}
+{ $var5 crm:F15F.refers_to $Endvar.}
+UNION{ $var5 crm:F15F.refers_to $var6 . $var6 crm:F4F.is_composed_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:F13B.Actor_performed_Event $var2.}
+UNION{$StartVar  crm:F13B.Actor_performed_Event $tempvar3.$tempvar3 crm:P9F.consists_of $var2.}
+{$var2 crm:F15F.refers_to $Endvar.}
+UNION{ $var2 crm:F15F.refers_to $var3 . $var3 crm:F4F.is_composed_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:F13B.Actor_performed_Event $var0.}
+UNION{$StartVar  crm:F13B.Actor_performed_Event $tempvar1.$tempvar1 crm:P9F.consists_of $var0.}
+{ $var0 crmdig:L1F.digitized $Endvar.}
+UNION{ $var0 crmdig:L1F.digitized $var1 . $var1 crm:F4F.is_composed_of $Endvar.}
+ }
+
+}

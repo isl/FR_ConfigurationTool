@@ -1,0 +1,12 @@
+E70.Thing -- (F4F.is_composed_of)[0,n]-> E70.Thing:
+{E70.Thing -- P2F.has_type-> E55.Type:
+{E55.Type --(P127F.has_broader_term)[0,n]-> E55.Type
+}
+OR 
+E70.Thing --F17F.Thing_is_made_of_Material-> E57.Material:
+{E55.Type --(P127F.has_broader_term)[0,n]-> E55.Type}
+OR 
+E70.Thing -- P44F.has_condition-> E3.Condition_State:
+{E3.Condition_State-- P2F.has_type->E55.Type:
+{E55.Type --(P127F.has_broader_term)[0,n]-> E55.Type}}
+}

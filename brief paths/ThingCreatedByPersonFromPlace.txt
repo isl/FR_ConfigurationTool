@@ -1,0 +1,4 @@
+E70.Thing -- F10F.Thing_createdIn_Event -> E63.Beginning_of_Existence:
+{E63.Beginning_of_Existence -- F13F.Event_by_Actor -> E39.Actor:
+{E39.Actor -- F7F.Actor_from_Place ->  E53.Place
+}}

@@ -1,0 +1,4 @@
+E39.Actor--F11F.Actor_createdIn_Event->E5.Event:{
+E5.Event--P4F.has_time-span->  E52.Time-Span:{
+E52.Time-Span --(P86F.falls_within)[0,n]-> E52.Time-Span
+}}

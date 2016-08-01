@@ -1,0 +1,5 @@
+E39.Actor -- (P107B.is_current_or_former_member_of)[0,n]-> E39.Actor:
+{E39.Actor-- F15B.is_referred_to_by  -> E70.Thing:
+{E70.Thing -- F10F.Thing_createdIn_Event -> E5.Event:
+{E5.Event-- F13F.Event_by_Actor -> E39.Actor 
+}}}

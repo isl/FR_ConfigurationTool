@@ -1,0 +1,5 @@
+E39.Actor--F13B.Actor_performed_Event->E5.Event:{
+
+E5.Event--F10B.Event_is_origin_of_Thing->E70.Thing
+
+}

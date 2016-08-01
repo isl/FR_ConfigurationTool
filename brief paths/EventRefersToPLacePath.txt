@@ -1,0 +1,14 @@
+E5.Event -- (P9F.consists_of)[0,n]-> E5.Event:
+{E5.Event -- F10B.Event_is_origin_of_Thing -> E70.Thing:
+{E70.Thing-- (F5F.consists_of_shows_features_of)[0,n]-> E70.Thing:
+{E24.Physical_Man-Made_Thing --F15F.refers_to-> E53.Place: 
+{E53.Place  --( P89B.contains)[0,n]-> E53.Place   }
+}}
+OR
+E5.Event--L1F.digitized->E70.Thing:
+{E70.Thing --(F5F.consists_of_shows_features_of)[0,n]-> E70.Thing:
+{E24.Physical_Man-Made_Thing --F15F.refers_to-> E53.Place: 
+{E53.Place  --( P89B.contains)[0,n]-> E53.Place   }
+}}}
+
+

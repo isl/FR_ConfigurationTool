@@ -1,0 +1,1 @@
+E70.Thing -- F8F.Thing_from_Place ->E53.Place
