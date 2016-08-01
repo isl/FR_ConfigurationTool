@@ -1,0 +1,8 @@
+E5.Event--{(P9F.consists_of)[0,n] OR 
+(P119F.meets_in_time_with) [0,n]  OR 
+( P119B.is_met_in_time_by) [0,n] OR
+ (P118F.overlaps_in_time_with) [0,n]  OR
+ ( P118B.is_overlapped_in_time_by) [0,n] OR
+ (P117B.includes)[0,n] OR 
+ (P114F.is_equal_in_time_to)[0,n] OR
+ (P10B.contains) [0,n]} -> E5.Event

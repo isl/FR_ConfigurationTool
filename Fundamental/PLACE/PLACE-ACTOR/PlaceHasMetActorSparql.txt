@@ -1,0 +1,29 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E53.Place.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P89B.contains $var5.
+{ $var5 crm:P7B.witnessed $var6.}
+UNION{ $var5 crm:P7B.witnessed $tempvar7.$tempvar7 crm:P9F.consists_of $var6.}
+{ $var6 crm:P12F.occurred_in_the_presence_of $Endvar.}
+UNION{ $var6 crm:P12F.occurred_in_the_presence_of $var7 . $var7 crm:P107B.is_current_or_former_member $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P7B.witnessed $var3.}
+UNION{$StartVar  crm:P7B.witnessed $tempvar4.$tempvar4 crm:P9F.consists_of $var3.}
+{ $var3 crm:P12F.occurred_in_the_presence_of $Endvar.}
+UNION{ $var3 crm:P12F.occurred_in_the_presence_of $var4 . $var4 crm:P107B.is_current_or_former_member $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P89B.contains $var1.
+{ $var1 crm:P74B.is_current_or_former_residence_of $Endvar.}
+UNION{ $var1 crm:P74B.is_current_or_former_residence_of $var2 . $var2 crm:P107F.has_current_or_former_member $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P74B.is_current_or_former_residence_of $Endvar.}
+UNION{$StartVar  crm:P74B.is_current_or_former_residence_of $var0 . $var0 crm:P107F.has_current_or_former_member $Endvar.}
+ }
+
+}

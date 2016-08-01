@@ -1,0 +1,9 @@
+E52.Time-Span --(P86F.falls_within)[0,n] -> E52.Time-Span:
+{E52.Time-Span --P4B.is_time-span_of ->E5.Event:
+{E5.Event--(P9F.consists_of)[0,n] -> E5.Event:
+{E63.Beginning_of_Existence --P92F.brought_into_existence-> E39.Actor:
+{ E39.Actor --(P107F.has_current_or_former_member)[0,n]  -> E39.Actor 
+}
+	}
+}
+}

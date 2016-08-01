@@ -1,0 +1,57 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:F4F.is_composed_of $var14.
+{ $var14 crm:P92B.was_brought_into_existence_by $var15.}
+UNION{ $var14 crm:P92B.was_brought_into_existence_by $tempvar16.$tempvar16 crm:P9B.forms_part_of $var15.}
+ $var15 crm:P33F.used_specific_technique $var16.
+{ $var16 crm:P68F.foresees_use_of $Endvar.}
+UNION{ $var16 crm:P68F.foresees_use_of $tempvar18.{$tempvar18  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar18 crm:P2F.has_type $Endvar.}}
+ }
+
+ UNION {  
+{$StartVar  crm:P92B.was_brought_into_existence_by $var11.}
+UNION{$StartVar  crm:P92B.was_brought_into_existence_by $tempvar12.$tempvar12 crm:P9B.forms_part_of $var11.}
+ $var11 crm:P33F.used_specific_technique $var12.
+{ $var12 crm:P68F.foresees_use_of $Endvar.}
+UNION{ $var12 crm:P68F.foresees_use_of $tempvar14.{$tempvar14  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar14 crm:P2F.has_type $Endvar.}}
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var8.
+{ $var8 crm:P92B.was_brought_into_existence_by $var9.}
+UNION{ $var8 crm:P92B.was_brought_into_existence_by $tempvar10.$tempvar10 crm:P9B.forms_part_of $var9.}
+{ $var9 crm:P126F.employed $Endvar.}
+UNION{ $var9 crm:P126F.employed $tempvar11.{$tempvar11  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar11 crm:P2F.has_type $Endvar.}}
+ }
+
+ UNION {  
+{$StartVar  crm:P92B.was_brought_into_existence_by $var6.}
+UNION{$StartVar  crm:P92B.was_brought_into_existence_by $tempvar7.$tempvar7 crm:P9B.forms_part_of $var6.}
+{ $var6 crm:P126F.employed $Endvar.}
+UNION{ $var6 crm:P126F.employed $tempvar8.{$tempvar8  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar8 crm:P2F.has_type $Endvar.}}
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var4.
+{ $var4 crm:P45F.consists_of $Endvar.}
+UNION{ $var4 crm:P45F.consists_of $tempvar6.{$tempvar6  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar6 crm:P2F.has_type $Endvar.}}
+ }
+
+ UNION {  
+{$StartVar  crm:P45F.consists_of $Endvar.}
+UNION{$StartVar  crm:P45F.consists_of $tempvar4.{$tempvar4  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar4 crm:P2F.has_type $Endvar.}}
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var1.
+{ $var1 crm:P2F.has_type $Endvar.}
+UNION{ $var1 crm:P2F.has_type $tempvar3.{$tempvar3  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar3 crm:P2F.has_type $Endvar.}}
+ }
+
+ UNION {  
+{$StartVar  crm:P2F.has_type $Endvar.}
+UNION{$StartVar  crm:P2F.has_type $tempvar1.{$tempvar1  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar1 crm:P2F.has_type $Endvar.}}
+ }
+
+}

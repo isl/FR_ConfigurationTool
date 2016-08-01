@@ -1,0 +1,21 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }
+{
+$StartVar  crm:F4F.is_composed_of $var1.
+{ $var1 crm:P110B.was_augmented_by $var2.}
+UNION{ $var1 crm:P110B.was_augmented_by $tempvar3.$tempvar3 crm:P9B.forms_part_of $var2.}
+ $var2 crm:P111F.added $Endvar .
+ }
+
+ UNION {  
+{$StartVar  crm:P110B.was_augmented_by $var0.}
+UNION{$StartVar  crm:P110B.was_augmented_by $tempvar1.$tempvar1 crm:P9B.forms_part_of $var0.}
+ $var0 crm:P111F.added $Endvar .
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $Endvar.
+ }
+
+}

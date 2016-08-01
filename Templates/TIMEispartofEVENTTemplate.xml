@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Time</subject>
+ <object>Event</object>
+ <name>is part of</name>
+ <label>is part of</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P86F.falls_within $var1.
+{ $var1 crm:P4B.is_time-span_of $param.}
+UNION{ $var1 crm:P4B.is_time-span_of $tempvar3.{$tempvar3  crm:P9B.forms_part_of $param.} UNION{ $tempvar3 crm:P119F.meets_in_time_with $param.} UNION{ $tempvar3 crm:P119B.is_met_in_time_by $param.} UNION{ $tempvar3 crm:P118F.overlaps_in_time_with $param.} UNION{ $tempvar3 crm:P118B.is_overlapped_in_time_by $param.} UNION{ $tempvar3 crm:P117F.occurs_during $param.} UNION{ $tempvar3 crm:P114F.is_equal_in_time_to $param.} UNION{ $tempvar3 crm:P10F.falls_within $param.} UNION{ $tempvar3 crm:P115F.finishes $param.} UNION{ $tempvar3 crm:P116F.starts $param.}}
+ }
+
+ UNION {  
+{$uri  crm:P4B.is_time-span_of $param.}
+UNION{$uri  crm:P4B.is_time-span_of $tempvar1.{$tempvar1  crm:P9B.forms_part_of $param.} UNION{ $tempvar1 crm:P119F.meets_in_time_with $param.} UNION{ $tempvar1 crm:P119B.is_met_in_time_by $param.} UNION{ $tempvar1 crm:P118F.overlaps_in_time_with $param.} UNION{ $tempvar1 crm:P118B.is_overlapped_in_time_by $param.} UNION{ $tempvar1 crm:P117F.occurs_during $param.} UNION{ $tempvar1 crm:P114F.is_equal_in_time_to $param.} UNION{ $tempvar1 crm:P10F.falls_within $param.} UNION{ $tempvar1 crm:P115F.finishes $param.} UNION{ $tempvar1 crm:P116F.starts $param.}}
+ }
+
+
+ ]]></query>
+ </relation>

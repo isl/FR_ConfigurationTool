@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Time</subject>
+ <object>Type</object>
+ <name>has type</name>
+ <label>has type</label>
+ <query>
+<![CDATA[  
+{$uri  crm:P2F.has_type $param.}
+UNION{$uri  crm:P2F.has_type $var0 . $var0 crm:P127F.has_broader_term $param.}
+
+ ]]></query>
+ </relation>

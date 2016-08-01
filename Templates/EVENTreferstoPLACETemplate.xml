@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Place</object>
+ <name>refers to</name>
+ <label>refers to</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P9F.consists_of $var7.
+{ $var7 crmdig:L1F.digitized $var8.}
+UNION{ $var7 crmdig:L1F.digitized $tempvar9.$tempvar9 crm:F5F.consists_of_shows_features_of $var8.}
+{ $var8 crm:F15F.refers_to $param.}
+UNION{ $var8 crm:F15F.refers_to $var9 . $var9 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crmdig:L1F.digitized $var5.}
+UNION{$uri  crmdig:L1F.digitized $tempvar6.$tempvar6 crm:F5F.consists_of_shows_features_of $var5.}
+{ $var5 crm:F15F.refers_to $param.}
+UNION{ $var5 crm:F15F.refers_to $var6 . $var6 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+$uri  crm:P9F.consists_of $var2.
+{ $var2 crm:F10B.Event_is_origin_of_Thing $var3.}
+UNION{ $var2 crm:F10B.Event_is_origin_of_Thing $tempvar4.$tempvar4 crm:F5F.consists_of_shows_features_of $var3.}
+{ $var3 crm:F15F.refers_to $param.}
+UNION{ $var3 crm:F15F.refers_to $var4 . $var4 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crm:F10B.Event_is_origin_of_Thing $var0.}
+UNION{$uri  crm:F10B.Event_is_origin_of_Thing $tempvar1.$tempvar1 crm:F5F.consists_of_shows_features_of $var0.}
+{ $var0 crm:F15F.refers_to $param.}
+UNION{ $var0 crm:F15F.refers_to $var1 . $var1 crm:P89B.contains $param.}
+ }
+
+
+ ]]></query>
+ </relation>

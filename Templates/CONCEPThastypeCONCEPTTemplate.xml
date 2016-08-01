@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Type</subject>
+ <object>Type</object>
+ <name>has type</name>
+ <label>has type</label>
+ <query>
+<![CDATA[  
+$uri  crm:P127F.has_broader_term $param.
+
+ ]]></query>
+ </relation>

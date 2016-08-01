@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Type</object>
+ <name>is made of</name>
+ <label>is made of</label>
+ <query>
+<![CDATA[  
+$uri  crm:F17F.Thing_is_made_of_Material $param.
+
+ ]]></query>
+ </relation>

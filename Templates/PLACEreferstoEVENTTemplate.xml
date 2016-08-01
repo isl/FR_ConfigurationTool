@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Place</subject>
+ <object>Event</object>
+ <name>refers to</name>
+ <label>refers to</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P89B.contains $var8.
+{ $var8 crm:P7B.witnessed $var9.}
+UNION{ $var8 crm:P7B.witnessed $tempvar10.$tempvar10 crm:P9F.consists_of $var9.}
+ $var9 crm:P92F.brought_into_existence $var10.
+{ $var10 crm:F15F.refers_to $param.}
+UNION{ $var10 crm:F15F.refers_to $var11 . $var11 crm:P9F.consists_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P7B.witnessed $var5.}
+UNION{$uri  crm:P7B.witnessed $tempvar6.$tempvar6 crm:P9F.consists_of $var5.}
+ $var5 crm:P92F.brought_into_existence $var6.
+{ $var6 crm:F15F.refers_to $param.}
+UNION{ $var6 crm:F15F.refers_to $var7 . $var7 crm:P9F.consists_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P89B.contains $var2.
+ $var2 crm:P53B.is_former_or_current_location_of $var3.
+{ $var3 crm:F15F.refers_to $param.}
+UNION{ $var3 crm:F15F.refers_to $var4 . $var4 crm:P9F.consists_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P53B.is_former_or_current_location_of $var0.
+{ $var0 crm:F15F.refers_to $param.}
+UNION{ $var0 crm:F15F.refers_to $var1 . $var1 crm:P9F.consists_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

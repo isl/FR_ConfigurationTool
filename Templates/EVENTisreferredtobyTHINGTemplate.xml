@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Thing</object>
+ <name>is referred to by</name>
+ <label>is referred to by</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P9B.forms_part_of $var13.
+ $var13 crm:F15B.is_referred_to_by $var14.
+{ $var14 crmdig:L1B.was_digitized_by $var15.}
+UNION{ $var14 crmdig:L1B.was_digitized_by $tempvar16.$tempvar16 crm:P9F.consists_of $var15.}
+{ $var15 crmdig:L11F.had_output $param.}
+UNION{ $var15 crmdig:L11F.had_output $var16 . $var16 crm:F5B.forms_part_of_shows_features_of $param.}
+ }
+
+ UNION {  
+$uri  crm:F15B.is_referred_to_by $var10.
+{ $var10 crmdig:L1B.was_digitized_by $var11.}
+UNION{ $var10 crmdig:L1B.was_digitized_by $tempvar12.$tempvar12 crm:P9F.consists_of $var11.}
+{ $var11 crmdig:L11F.had_output $param.}
+UNION{ $var11 crmdig:L11F.had_output $var12 . $var12 crm:F5B.forms_part_of_shows_features_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P9B.forms_part_of $var6.
+ $var6 crm:F15B.is_referred_to_by $var7.
+{ $var7 crmdig:L1B.was_digitized_by $var8.}
+UNION{ $var7 crmdig:L1B.was_digitized_by $tempvar9.$tempvar9 crm:P9F.consists_of $var8.}
+{ $var8 crmdig:L11F.had_output $param.}
+UNION{ $var8 crmdig:L11F.had_output $var9 . $var9 crm:F5B.forms_part_of_shows_features_of $param.}
+ }
+
+ UNION {  
+$uri  crm:F15B.is_referred_to_by $var3.
+{ $var3 crmdig:L1B.was_digitized_by $var4.}
+UNION{ $var3 crmdig:L1B.was_digitized_by $tempvar5.$tempvar5 crm:P9F.consists_of $var4.}
+{ $var4 crmdig:L11F.had_output $param.}
+UNION{ $var4 crmdig:L11F.had_output $var5 . $var5 crm:F5B.forms_part_of_shows_features_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P9B.forms_part_of $var1.
+{ $var1 crm:F15B.is_referred_to_by $param.}
+UNION{ $var1 crm:F15B.is_referred_to_by $var2 . $var2 crm:P148B.is_component_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:F15B.is_referred_to_by $param.}
+UNION{$uri  crm:F15B.is_referred_to_by $var0 . $var0 crm:P148B.is_component_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

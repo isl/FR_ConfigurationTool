@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Place</object>
+ <name>acquired in</name>
+ <label>acquired in</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:F4B.is_component_of $var2.
+{ $var2 crm:P24B.changed_ownership_through $var3.}
+UNION{ $var2 crm:P24B.changed_ownership_through $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+{ $var3 crm:P7F.took_place_at $param.}
+UNION{ $var3 crm:P7F.took_place_at $var4 . $var4 crm:P89F.falls_within $param.}
+ }
+
+ UNION {  
+{$uri  crm:P24B.changed_ownership_through $var0.}
+UNION{$uri  crm:P24B.changed_ownership_through $tempvar1.$tempvar1 crm:P9B.forms_part_of $var0.}
+{ $var0 crm:P7F.took_place_at $param.}
+UNION{ $var0 crm:P7F.took_place_at $var1 . $var1 crm:P89F.falls_within $param.}
+ }
+
+
+ ]]></query>
+ </relation>

@@ -1,0 +1,15 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E55.Type.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }
+{
+$StartVar  crm:P127B.has_narrower_term $var1.
+{ $var1 crm:P2B.is_type_of $Endvar.}
+UNION{ $var1 crm:P2B.is_type_of $var2 . $var2 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P2B.is_type_of $Endvar.}
+UNION{$StartVar  crm:P2B.is_type_of $var0 . $var0 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+}

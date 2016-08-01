@@ -1,0 +1,35 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E53.Place.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P89B.contains $var8.
+{ $var8 crm:P53B.is_former_or_current_location_of $var9.}
+UNION{ $var8 crm:P53B.is_former_or_current_location_of $tempvar10.$tempvar10 crm:P46F.is_composed_of $var9.}
+ $var9 crm:P128F.carries $var10.
+{ $var10 crm:P67F.refers_to $Endvar.}
+UNION{ $var10 crm:P67F.refers_to $var11 . $var11 crm:P9F.consists_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P53B.is_former_or_current_location_of $var5.}
+UNION{$StartVar  crm:P53B.is_former_or_current_location_of $tempvar6.$tempvar6 crm:P46F.is_composed_of $var5.}
+ $var5 crm:P128F.carries $var6.
+{ $var6 crm:P67F.refers_to $Endvar.}
+UNION{ $var6 crm:P67F.refers_to $var7 . $var7 crm:P9F.consists_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P89B.contains $var2.
+{ $var2 crm:P53B.is_former_or_current_location_of $var3.}
+UNION{ $var2 crm:P53B.is_former_or_current_location_of $tempvar4.$tempvar4 crm:P46F.is_composed_of $var3.}
+{ $var3 crm:P62F.depicts $Endvar.}
+UNION{ $var3 crm:P62F.depicts $var4 . $var4 crm:P9F.consists_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P53B.is_former_or_current_location_of $var0.}
+UNION{$StartVar  crm:P53B.is_former_or_current_location_of $tempvar1.$tempvar1 crm:P46F.is_composed_of $var0.}
+{ $var0 crm:P62F.depicts $Endvar.}
+UNION{ $var0 crm:P62F.depicts $var1 . $var1 crm:P9F.consists_of $Endvar.}
+ }
+
+}

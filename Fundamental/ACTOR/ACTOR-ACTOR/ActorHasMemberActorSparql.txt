@@ -1,0 +1,20 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E74.Group.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P107F.has_current_or_former_member $var2.
+ $var2 crm:P144B.gained_member_by $var3.
+{ $var3 crm:P143F.joined $Endvar.}
+UNION{ $var3 crm:P143F.joined $var4 . $var4 crm:P107F.has_current_or_former_member $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P144B.gained_member_by $var0.
+{ $var0 crm:P143F.joined $Endvar.}
+UNION{ $var0 crm:P143F.joined $var1 . $var1 crm:P107F.has_current_or_former_member $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P107F.has_current_or_former_member $Endvar.
+ }
+
+}

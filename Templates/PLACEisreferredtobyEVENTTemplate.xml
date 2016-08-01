@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Place</subject>
+ <object>Event</object>
+ <name>is referred to by</name>
+ <label>is referred to by</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P89F.falls_within $var1.
+ $var1 crm:F15B.is_referred_to_by $var2.
+ $var2 crm:F10F.Thing_createdIn_Event $param .
+ }
+
+ UNION {  
+$uri  crm:F15B.is_referred_to_by $var0.
+ $var0 crm:F10F.Thing_createdIn_Event $param .
+ }
+
+
+ ]]></query>
+ </relation>

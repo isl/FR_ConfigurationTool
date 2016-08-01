@@ -1,0 +1,56 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E5.Event.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P10F.falls_within $var15.
+{ $var15 crm:P4F.has_time-span $Endvar.}
+UNION{ $var15 crm:P4F.has_time-span $var16 . $var16 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P114F.is_equal_in_time_to $var13.
+{ $var13 crm:P4F.has_time-span $Endvar.}
+UNION{ $var13 crm:P4F.has_time-span $var14 . $var14 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P117F.occurs_during $var11.
+{ $var11 crm:P4F.has_time-span $Endvar.}
+UNION{ $var11 crm:P4F.has_time-span $var12 . $var12 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P118B.is_overlapped_in_time_by $var9.
+{ $var9 crm:P4F.has_time-span $Endvar.}
+UNION{ $var9 crm:P4F.has_time-span $var10 . $var10 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P119B.is_met_in_time_by $var7.
+{ $var7 crm:P4F.has_time-span $Endvar.}
+UNION{ $var7 crm:P4F.has_time-span $var8 . $var8 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P118F.overlaps_in_time_with $var5.
+{ $var5 crm:P4F.has_time-span $Endvar.}
+UNION{ $var5 crm:P4F.has_time-span $var6 . $var6 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P119F.meets_in_time_with $var3.
+{ $var3 crm:P4F.has_time-span $Endvar.}
+UNION{ $var3 crm:P4F.has_time-span $var4 . $var4 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P9B.forms_part_of $var1.
+{ $var1 crm:P4F.has_time-span $Endvar.}
+UNION{ $var1 crm:P4F.has_time-span $var2 . $var2 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P4F.has_time-span $Endvar.}
+UNION{$StartVar  crm:P4F.has_time-span $var0 . $var0 crm:P86F.falls_within $Endvar.}
+ }
+
+}

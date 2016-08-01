@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Concept</subject>
+ <object>Type</object>
+ <name>it type of</name>
+ <label>it type of</label>
+ <query>
+<![CDATA[  
+$uri  crm:P127B.has_narrower_term $param.
+
+ ]]></query>
+ </relation>

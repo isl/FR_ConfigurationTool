@@ -1,0 +1,9 @@
+E39.Actor --(P107F.has_current_or_former_member)[0,n]-> E39.Actor:
+{E39.Actor--P12B.was_present_at-> E5.Event:
+{E5.Event-- (P9F.consists_of)[0,n] -> E5.Event:
+{E5.Event --P12F.occurred_in_the_presence_of-> E39.Actor:
+{ E39.Actor--(P107B.is_current_or_former_member_of )[0,n]-> E39.Actor
+}
+}
+}
+}

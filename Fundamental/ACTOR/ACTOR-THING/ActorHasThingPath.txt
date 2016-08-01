@@ -1,0 +1,6 @@
+E39.Actor --(P107F.has_current_or_former_member)[0,n]->E39.Actor:
+{E39.Actor --{ P49B.is_former_or_current_keeper_of OR P51B.is_former_or_current_owner_of }-> E18.Physical_Thing:
+{E18.Physical_Thing -- (P46F.is_composed_of) [0,n] -> 
+E18.Physical_Thing
+}
+}

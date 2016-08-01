@@ -1,0 +1,18 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E52.Time-Span.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P86F.falls_within $var2.
+{ $var2 crm:P4B.is_time-span_of $var3.}
+UNION{ $var2 crm:P4B.is_time-span_of $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+{ $var3 crm:P7F.took_place_at $Endvar.}
+UNION{ $var3 crm:P7F.took_place_at $var4 . $var4 crm:P89F.falls_within $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P4B.is_time-span_of $var0.}
+UNION{$StartVar  crm:P4B.is_time-span_of $tempvar1.$tempvar1 crm:P9B.forms_part_of $var0.}
+{ $var0 crm:P7F.took_place_at $Endvar.}
+UNION{ $var0 crm:P7F.took_place_at $var1 . $var1 crm:P89F.falls_within $Endvar.}
+ }
+
+}

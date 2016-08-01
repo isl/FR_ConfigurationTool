@@ -1,0 +1,5 @@
+E70.Thing -- (F4B.is_component_of)[0,n] -> E70.Thing:
+ { E70.Thing -- P12B.was_present_at-> E5.Event:
+{E5.Event--(P9B.forms_part_of)[0,n]->E5.Event 
+}
+}

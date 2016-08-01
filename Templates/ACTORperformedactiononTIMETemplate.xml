@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Actor</subject>
+ <object>Time</object>
+ <name>performed action on</name>
+ <label>performed action on</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P107F.has_current_or_former_member $var2.
+{ $var2 crm:P14B.performed $var3.}
+UNION{ $var2 crm:P14B.performed $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+{ $var3 crm:P4F.has_time-span $param.}
+UNION{ $var3 crm:P4F.has_time-span $var4 . $var4 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+{$uri  crm:P14B.performed $var0.}
+UNION{$uri  crm:P14B.performed $tempvar1.$tempvar1 crm:P9B.forms_part_of $var0.}
+{ $var0 crm:P4F.has_time-span $param.}
+UNION{ $var0 crm:P4F.has_time-span $var1 . $var1 crm:P86F.falls_within $param.}
+ }
+
+
+ ]]></query>
+ </relation>

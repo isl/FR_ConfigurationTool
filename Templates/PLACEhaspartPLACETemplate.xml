@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Place</subject>
+ <object>Place</object>
+ <name>has part</name>
+ <label>has part</label>
+ <query>
+<![CDATA[  
+$uri  crm:P89B.contains $param.
+
+ ]]></query>
+ </relation>

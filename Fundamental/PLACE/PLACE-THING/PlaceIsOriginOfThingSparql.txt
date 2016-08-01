@@ -1,0 +1,18 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E53.Place.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P89B.contains $var2.
+{ $var2 crm:P7B.witnessed $var3.}
+UNION{ $var2 crm:P7B.witnessed $tempvar4.$tempvar4 crm:P9F.consists_of $var3.}
+{ $var3 crm:P92F.brought_into_existence $Endvar.}
+UNION{ $var3 crm:P92F.brought_into_existence $var4 . $var4 crm:F4B.is_component_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P7B.witnessed $var0.}
+UNION{$StartVar  crm:P7B.witnessed $tempvar1.$tempvar1 crm:P9F.consists_of $var0.}
+{ $var0 crm:P92F.brought_into_existence $Endvar.}
+UNION{ $var0 crm:P92F.brought_into_existence $var1 . $var1 crm:F4B.is_component_of $Endvar.}
+ }
+
+}

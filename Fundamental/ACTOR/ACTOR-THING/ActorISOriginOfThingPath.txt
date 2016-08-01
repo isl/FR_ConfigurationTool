@@ -1,0 +1,14 @@
+E39.Actor --(P107F.has_current_or_former_member)[0,n]->E39.Actor:
+{E39.Actor -- P14B.performed -> E7.Activity:
+	{E7.Activity -- (P9F.consists_of)[0,n]-> E5.Event:
+{E63.Beginning_of_Existence --P92F.brought_into_existence -> E70.Thing:
+{E70.Thing -- (F4F.is_composed_of)[0,n]-> E70.Thing 
+}
+}
+}
+OR
+E39.Actor --{ P49B.is_former_or_current_keeper_of OR P51B.is_former_or_current_owner_of }-> E18.Physical_Thing:
+{E18.Physical_Thing -- (P46F.is_composed_of) [0,n] -> 
+E18.Physical_Thing 
+}
+}

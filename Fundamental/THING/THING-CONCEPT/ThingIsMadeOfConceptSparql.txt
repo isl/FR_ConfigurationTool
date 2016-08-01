@@ -1,0 +1,40 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P45F.consists_of $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var0.
+ $var0 crm:P45F.consists_of $Endvar .
+ }
+
+ UNION {  
+{$StartVar  crm:P92B.was_brought_into_existence_by $var1.}
+UNION{$StartVar  crm:P92B.was_brought_into_existence_by $tempvar2.$tempvar2 crm:P9B.forms_part_of $var1.}
+ $var1 crm:P126F.employed $Endvar .
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var2.
+{ $var2 crm:P92B.was_brought_into_existence_by $var3.}
+UNION{ $var2 crm:P92B.was_brought_into_existence_by $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+ $var3 crm:P126F.employed $Endvar .
+ }
+
+ UNION {  
+{$StartVar  crm:P92B.was_brought_into_existence_by $var4.}
+UNION{$StartVar  crm:P92B.was_brought_into_existence_by $tempvar5.$tempvar5 crm:P9B.forms_part_of $var4.}
+ $var4 crm:P33F.used_specific_technique $var5.
+ $var5 crm:P68F.foresees_use_of $Endvar .
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var6.
+{ $var6 crm:P92B.was_brought_into_existence_by $var7.}
+UNION{ $var6 crm:P92B.was_brought_into_existence_by $tempvar8.$tempvar8 crm:P9B.forms_part_of $var7.}
+ $var7 crm:P33F.used_specific_technique $var8.
+ $var8 crm:P68F.foresees_use_of $Endvar .
+ }
+
+}

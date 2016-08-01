@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Place</object>
+ <name>refers to</name>
+ <label>refers to</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:F5F.consists_of_shows_features_of $var26.
+{ $var26 crmdig:L11B.was_output_of $var27.}
+UNION{ $var26 crmdig:L11B.was_output_of $tempvar28.$tempvar28 crm:P9B.forms_part_of $var27.}
+ $var27 crmdig:L1F.digitized $var28.
+ $var28 crm:F15F.refers_to $var29.
+{ $var29 crm:P53F.has_former_or_current_location $param.}
+UNION{ $var29 crm:P53F.has_former_or_current_location $var30 . $var30 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crmdig:L11B.was_output_of $var22.}
+UNION{$uri  crmdig:L11B.was_output_of $tempvar23.$tempvar23 crm:P9B.forms_part_of $var22.}
+ $var22 crmdig:L1F.digitized $var23.
+ $var23 crm:F15F.refers_to $var24.
+{ $var24 crm:P53F.has_former_or_current_location $param.}
+UNION{ $var24 crm:P53F.has_former_or_current_location $var25 . $var25 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+$uri  crm:F5F.consists_of_shows_features_of $var18.
+{ $var18 crmdig:L11B.was_output_of $var19.}
+UNION{ $var18 crmdig:L11B.was_output_of $tempvar20.$tempvar20 crm:P9B.forms_part_of $var19.}
+ $var19 crmdig:L1F.digitized $var20.
+{ $var20 crm:F15F.refers_to $param.}
+UNION{ $var20 crm:F15F.refers_to $var21 . $var21 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crmdig:L11B.was_output_of $var15.}
+UNION{$uri  crmdig:L11B.was_output_of $tempvar16.$tempvar16 crm:P9B.forms_part_of $var15.}
+ $var15 crmdig:L1F.digitized $var16.
+{ $var16 crm:F15F.refers_to $param.}
+UNION{ $var16 crm:F15F.refers_to $var17 . $var17 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+$uri  crm:F5F.consists_of_shows_features_of $var11.
+{ $var11 crmdig:L11B.was_output_of $var12.}
+UNION{ $var11 crmdig:L11B.was_output_of $tempvar13.$tempvar13 crm:P9B.forms_part_of $var12.}
+ $var12 crmdig:L1F.digitized $var13.
+{ $var13 crm:P53F.has_former_or_current_location $param.}
+UNION{ $var13 crm:P53F.has_former_or_current_location $var14 . $var14 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crmdig:L11B.was_output_of $var8.}
+UNION{$uri  crmdig:L11B.was_output_of $tempvar9.$tempvar9 crm:P9B.forms_part_of $var8.}
+ $var8 crmdig:L1F.digitized $var9.
+{ $var9 crm:P53F.has_former_or_current_location $param.}
+UNION{ $var9 crm:P53F.has_former_or_current_location $var10 . $var10 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+$uri  crm:F5F.consists_of_shows_features_of $var5.
+ $var5 crm:F15F.refers_to $var6.
+{ $var6 crm:P53F.has_former_or_current_location $param.}
+UNION{ $var6 crm:P53F.has_former_or_current_location $var7 . $var7 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+$uri  crm:F15F.refers_to $var3.
+{ $var3 crm:P53F.has_former_or_current_location $param.}
+UNION{ $var3 crm:P53F.has_former_or_current_location $var4 . $var4 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+$uri  crm:F5F.consists_of_shows_features_of $var1.
+{ $var1 crm:F15F.refers_to $param.}
+UNION{ $var1 crm:F15F.refers_to $var2 . $var2 crm:P89B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crm:F15F.refers_to $param.}
+UNION{$uri  crm:F15F.refers_to $var0 . $var0 crm:P89B.contains $param.}
+ }
+
+
+ ]]></query>
+ </relation>

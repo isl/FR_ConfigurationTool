@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Time</subject>
+ <object>Time</object>
+ <name>has part</name>
+ <label>has part</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P86F.falls_within $var1.
+{ $var1 crm:P4B.is_time-span_of $var2.}
+UNION{ $var1 crm:P4B.is_time-span_of $tempvar3.{$tempvar3  crm:P9F.consists_of $var2.} UNION{ $tempvar3 crm:P119F.meets_in_time_with $var2.} UNION{ $tempvar3 crm:P119B.is_met_in_time_byP118F.overlaps_in_time_with $var2.} UNION{ $tempvar3 crm:P118B.is_overlapped_in_time_byORP117B.includes $var2.} UNION{ $tempvar3 crm:P114F.is_equal_in_time_to $var2.} UNION{ $tempvar3 crm:P10B.containsORP115B.is_finished_by $var2.} UNION{ $tempvar3 crm:P116B.is_started_by $var2.}}
+ $var2 crm:P4F.has_time-span $param .
+ }
+
+ UNION {  
+{$uri  crm:P4B.is_time-span_of $var0.}
+UNION{$uri  crm:P4B.is_time-span_of $tempvar1.{$tempvar1  crm:P9F.consists_of $var0.} UNION{ $tempvar1 crm:P119F.meets_in_time_with $var0.} UNION{ $tempvar1 crm:P119B.is_met_in_time_byP118F.overlaps_in_time_with $var0.} UNION{ $tempvar1 crm:P118B.is_overlapped_in_time_byORP117B.includes $var0.} UNION{ $tempvar1 crm:P114F.is_equal_in_time_to $var0.} UNION{ $tempvar1 crm:P10B.containsORP115B.is_finished_by $var0.} UNION{ $tempvar1 crm:P116B.is_started_by $var0.}}
+ $var0 crm:P4F.has_time-span $param .
+ }
+
+
+ ]]></query>
+ </relation>

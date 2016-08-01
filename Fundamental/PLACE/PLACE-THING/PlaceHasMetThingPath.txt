@@ -1,0 +1,27 @@
+E53.Place--(P89B.contains) [0,n]  -> E53.Place:
+{E53.Place-- P53B.is_former_or_current_location_of -> E24.Physical_Man-Made_Thing :
+{ E24.Physical_Man-Made_Thing -- (P46F.is_composed_of) [0,n] ->   E24.Physical_Man-Made_Thing
+}
+OR
+E53.Place --P7B.witnessed->E5.Event:
+{E5.Event --(P9F.consists_of)[0,n]-> E5.Event:
+{E5.Event--P92F.brought_into_existence-> E70.Thing:
+{ E70.Thing --(F4B.is_component_of)[0,n]-> E70.Thing
+}
+OR
+E11.Modification-- P31F.has_modified  -> E70.Thing:
+{ E70.Thing --(F4B.is_component_of)[0,n]-> E70.Thing
+}
+OR
+E9.Move -- P25F.moved -> E19.Physical_Object:
+{ E19.Physical_Object --(P46B.forms_part_of)[0,n] -> E19.Physical_Object
+}
+}
+ }
+ OR
+E53.Place-- P74B.is_current_or_former_residence_of  -> E39.Actor:
+{E39.Actor-- {P49B.is_former_or_current_keeper_of OR P51B.is_former_or_current_owner_of} -> E18.Physical_Thing:
+{E18.Physical_Thing --(P46B.forms_part_of)[0,n] -> E18.Physical_Thing
+}
+}
+}

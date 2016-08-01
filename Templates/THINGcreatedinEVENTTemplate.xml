@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Event</object>
+ <name>created in</name>
+ <label>created in</label>
+ <query>
+<![CDATA[  
+$uri  crm:F10F.Thing_createdIn_Event $param.
+
+ ]]></query>
+ </relation>

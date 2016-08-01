@@ -1,0 +1,5 @@
+E5.Event--(P9F.consists_of)[0,n]-> E5.Event:
+{E5.Event-- P2F.has_type-> E55.Type:
+{ E55.Type -- (P127F.has_broader_term)[0,n]-> E55.Type 
+}
+}

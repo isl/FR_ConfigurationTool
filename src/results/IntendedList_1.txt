@@ -1,0 +1,7 @@
+E70.Thing--{P130F.shows_features_of OR P130B.features_are_also_found_on}->E70.Thing
+	E24.Physical_Man-Made_Thing--P62F.depicts->E53.Place
+	OR
+	E89.Propositional_Object--{P67F.refers_to OR P129F.is_about}->E53.Place
+	OR
+	E24.Physical_Man-Made_Thing--P128F.carries->E73.Information_Object
+		E73.Information_Object--{P67F.refers_to OR P129F.is_about}->E53.Place

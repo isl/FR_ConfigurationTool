@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Actor</subject>
+ <object>Thing</object>
+ <name>is creator of</name>
+ <label>is creator of</label>
+ <query>
+<![CDATA[  
+$uri  crm:F13B.Actor_performed_Event $var0.
+ $var0 crm:F10B.Event_is_origin_of_Thing $param .
+
+ ]]></query>
+ </relation>

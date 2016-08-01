@@ -1,0 +1,13 @@
+E70.Thing -- (P46F.is_composed_of) [0,n]-> E18.Physical_Thing:
+{E18.Physical_Thing-- P24B.changed_ownership_through -> E8.Acquisition:
+{E5.Event-- (P9B.forms_part_of)[0,n] -> E5.Event:
+{E7.Activity-- P14F.carried_out_by-> E39.Actor:
+{E39.Actor -- (P107B.is_current_or_former_member_of )[0,n]  -> E39.Actor 	
+}
+}
+}
+OR
+E18.Physical_Thing--P51F.has_former_or_current_owner   -> E39.Actor:
+{E39.Actor -- (P107B.is_current_or_former_member_of )[0,n]  -> E39.Actor 
+}
+}

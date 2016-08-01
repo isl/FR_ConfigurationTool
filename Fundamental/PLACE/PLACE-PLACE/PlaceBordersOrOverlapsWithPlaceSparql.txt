@@ -1,0 +1,23 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E53.Place.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }
+{
+$StartVar  crm:P89B.contains $var1.
+{ { $var1 crm:P122F.borders_with $Endvar.
+}UNION{ $var1 crm:P121F.overlaps_with $Endvar.}
+}
+UNION{{ $var1 crm:P122F.borders_with $var2
+}UNION{ $var1 crm:P121F.overlaps_with $var2
+} $var2 crm:P89F.falls_within $Endvar.}
+ }
+
+ UNION {  
+{ { $StartVar crm:P122F.borders_with $Endvar.
+}UNION{ $StartVar crm:P121F.overlaps_with $Endvar.}
+}
+UNION{{ $StartVar crm:P122F.borders_with $var0
+}UNION{ $StartVar crm:P121F.overlaps_with $var0
+} $var0 crm:P89F.falls_within $Endvar.}
+ }
+
+}

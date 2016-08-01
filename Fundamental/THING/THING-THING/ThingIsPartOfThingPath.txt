@@ -1,0 +1,1 @@
+E70.Thing -- (F4B.is_component_of)[0,n] -> E70.Thing

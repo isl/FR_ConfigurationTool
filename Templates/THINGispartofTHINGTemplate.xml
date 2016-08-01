@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Thing</object>
+ <name>is part of</name>
+ <label>is part of</label>
+ <query>
+<![CDATA[  
+$uri  crm:F4B.is_component_of $param.
+
+ ]]></query>
+ </relation>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Event</object>
+ <name>has part</name>
+ <label>has part</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P10B.contains $param.
+ }
+
+ UNION {  
+$uri  crm:P114F.is_equal_in_time_to $param.
+ }
+
+ UNION {  
+$uri  crm:P117B.includes $param.
+ }
+
+ UNION {  
+$uri  crm:P118B.is_overlapped_in_time_by $param.
+ }
+
+ UNION {  
+$uri  crm:P118B.is_overlapped_in_time_by $param.
+ }
+
+ UNION {  
+$uri  crm:P118F.overlaps_in_time_with $param.
+ }
+
+ UNION {  
+$uri  crm:P119B.is_met_in_time_by $param.
+ }
+
+ UNION {  
+$uri  crm:P119F.meets_in_time_with $param.
+ }
+
+ UNION {  
+$uri  crm:P9F.consists_of $param.
+ }
+
+
+ ]]></query>
+ </relation>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Type</subject>
+ <object>Type</object>
+ <name>is type of</name>
+ <label>is type of</label>
+ <query>
+<![CDATA[  
+$uri  crm:P127B.has_narrower_term $param.
+
+ ]]></query>
+ </relation>

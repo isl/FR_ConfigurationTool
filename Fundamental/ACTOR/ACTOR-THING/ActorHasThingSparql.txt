@@ -1,0 +1,22 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E39.Actor.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P107F.has_current_or_former_member $var1.
+{ { $var1 crm:P49B.is_former_or_current_keeper_of $Endvar.
+}UNION{ $var1 crm:P51B.is_former_or_current_owner_of $Endvar.}
+}
+UNION{{ $var1 crm:P49B.is_former_or_current_keeper_of $var2
+}UNION{ $var1 crm:P51B.is_former_or_current_owner_of $var2
+} $var2 crm:P46F.is_composed_of $Endvar.}
+ }
+
+ UNION {  
+{ { $StartVar crm:P49B.is_former_or_current_keeper_of $Endvar.
+}UNION{ $StartVar crm:P51B.is_former_or_current_owner_of $Endvar.}
+}
+UNION{{ $StartVar crm:P49B.is_former_or_current_keeper_of $var0
+}UNION{ $StartVar crm:P51B.is_former_or_current_owner_of $var0
+} $var0 crm:P46F.is_composed_of $Endvar.}
+ }
+
+}

@@ -1,0 +1,6 @@
+E70.Thing -- (F4B.is_component_of)[0,n]  -> E70.Thing:
+{E18.Physical_Thing -- P53F.has_former_or_current_location ->E53.Place  :
+{E53.Place  --(P89F.falls_within)[0,n]-> E53.Place  
+}
+}
+

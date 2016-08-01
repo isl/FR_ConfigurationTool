@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Place</subject>
+ <object>Event</object>
+ <name>has met</name>
+ <label>has met</label>
+ <query>
+<![CDATA[  
+$uri  crm:F12B.Place_hosts_Event $param.
+
+ ]]></query>
+ </relation>

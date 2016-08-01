@@ -1,0 +1,4 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E53.Place.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }$StartVar  crm:P89B.contains $Endvar.
+}

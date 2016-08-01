@@ -1,0 +1,3 @@
+E70.Thing -- (F4B.is_component_of)[0,n]  -> E70.Thing:{E19.Physical_Object --  P24B.changed_ownership_through -> E8.Acquisition:{ E8.Acquisition-- (P9B.forms_part_of)[0,n] ->  E5.Event:
+{ E5.Event -- P7F.took_place_at -> E53.Place :{E53.Place  --(P89F.falls_within)[0,n]-> E53.Place
+}}}}

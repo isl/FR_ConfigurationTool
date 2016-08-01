@@ -1,0 +1,6 @@
+E5.Event --(P9F.consists_of)[0,n] ->E11.Modification:
+{E11.Modification-- P31F.has_modified->E24.Physical_Man-Made_Thing:
+{E24.Physical_Man-Made_Thing --(F4F.is_composed_of)[0,n]-> E18.Physical_Thing
+}
+}
+

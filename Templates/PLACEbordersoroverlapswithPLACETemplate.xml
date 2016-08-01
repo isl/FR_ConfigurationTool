@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Place</subject>
+ <object>Place</object>
+ <name>borders or overlaps with</name>
+ <label>borders or overlaps with</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P89B.contains $var1.
+{ { $var1 crm:P122F.borders_with $param.
+}UNION{ $var1 crm:P121F.overlaps_with $param.}
+}
+UNION{{ $var1 crm:P122F.borders_with $var2
+}UNION{ $var1 crm:P121F.overlaps_with $var2
+} $var2 crm:P89F.falls_within $param.}
+ }
+
+ UNION {  
+{ { $uri crm:P122F.borders_with $param.
+}UNION{ $uri crm:P121F.overlaps_with $param.}
+}
+UNION{{ $uri crm:P122F.borders_with $var0
+}UNION{ $uri crm:P121F.overlaps_with $var0
+} $var0 crm:P89F.falls_within $param.}
+ }
+
+
+ ]]></query>
+ </relation>

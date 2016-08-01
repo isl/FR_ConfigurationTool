@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Time</object>
+ <name>refers to</name>
+ <label>refers to</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:F5F.consists_of_shows_features_of $var6.
+{ $var6 crmdig:L11B.was_output_of $var7.}
+UNION{ $var6 crmdig:L11B.was_output_of $tempvar8.$tempvar8 crm:P9B.forms_part_of $var7.}
+ $var7 crmdig:L1F.digitized $var8.
+{ $var8 crm:F15F.refers_to $param.}
+UNION{ $var8 crm:F15F.refers_to $var9 . $var9 crm:P86B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crmdig:L11B.was_output_of $var3.}
+UNION{$uri  crmdig:L11B.was_output_of $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+ $var3 crmdig:L1F.digitized $var4.
+{ $var4 crm:F15F.refers_to $param.}
+UNION{ $var4 crm:F15F.refers_to $var5 . $var5 crm:P86B.contains $param.}
+ }
+
+ UNION {  
+$uri  crm:F5F.consists_of_shows_features_of $var1.
+{ $var1 crm:F15F.refers_to $param.}
+UNION{ $var1 crm:F15F.refers_to $var2 . $var2 crm:P86B.contains $param.}
+ }
+
+ UNION {  
+{$uri  crm:F15F.refers_to $param.}
+UNION{$uri  crm:F15F.refers_to $var0 . $var0 crm:P86B.contains $param.}
+ }
+
+
+ ]]></query>
+ </relation>

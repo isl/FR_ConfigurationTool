@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Time</subject>
+ <object>Actor</object>
+ <name>signals the beginning of</name>
+ <label>signals the beginning of</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P86F.falls_within $var1.
+ $var1 crm:P4B.is_time-span_of $var2.
+ $var2 crm:F11B.Event_is_origin_of_Actor $param .
+ }
+
+ UNION {  
+$uri  crm:P4B.is_time-span_of $var0.
+ $var0 crm:F11B.Event_is_origin_of_Actor $param .
+ }
+
+
+ ]]></query>
+ </relation>

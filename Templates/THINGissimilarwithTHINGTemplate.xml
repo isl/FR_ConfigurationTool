@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Thing</object>
+ <name>is similar with</name>
+ <label>is similar with</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P130B.features_are_also_found_on $var3.
+ $var3 crmdig:L54B.is_same-as $var4.
+ $var4 crmdig:L54F.is_same-as $param .
+ }
+
+ UNION {  
+$uri  crm:P130F.shows_features_of $var1.
+ $var1 crmdig:L54B.is_same-as $var2.
+ $var2 crmdig:L54F.is_same-as $param .
+ }
+
+ UNION {  
+$uri  crmdig:L54B.is_same-as $var0.
+ $var0 crmdig:L54F.is_same-as $param .
+ }
+
+ UNION {  
+$uri  crm:P130B.features_are_also_found_on $param.
+ }
+
+ UNION {  
+$uri  crm:P130F.shows_features_of $param.
+ }
+
+
+ ]]></query>
+ </relation>

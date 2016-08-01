@@ -1,0 +1,29 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E52.Time-Span.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P86F.falls_within $var5.
+{ $var5 crm:P67B.is_referred_to_by $var6.}
+UNION{ $var5 crm:P67B.is_referred_to_by $tempvar7.$tempvar7 crm:F5B.forms_part_of_shows_features_of $var6.}
+{ $var6 crm:P128B.is_carried_by $Endvar.}
+UNION{ $var6 crm:P128B.is_carried_by $var7 . $var7 crm:P46F.is_composed_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P67B.is_referred_to_by $var3.}
+UNION{$StartVar  crm:P67B.is_referred_to_by $tempvar4.$tempvar4 crm:F5B.forms_part_of_shows_features_of $var3.}
+{ $var3 crm:P128B.is_carried_by $Endvar.}
+UNION{ $var3 crm:P128B.is_carried_by $var4 . $var4 crm:P46F.is_composed_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P86F.falls_within $var1.
+{ $var1 crm:P62B.is_depicted_by $Endvar.}
+UNION{ $var1 crm:P62B.is_depicted_by $var2 . $var2 crm:F5B.forms_part_of_shows_features_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P62B.is_depicted_by $Endvar.}
+UNION{$StartVar  crm:P62B.is_depicted_by $var0 . $var0 crm:F5B.forms_part_of_shows_features_of $Endvar.}
+ }
+
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Type</subject>
+ <object>Thing</object>
+ <name>is type of</name>
+ <label>is type of</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P127B.has_narrower_term $var19.
+ $var19 crm:P68B.use_foreseen_by $var20.
+ $var20 crm:P33B.was_used_by $var21.
+{ $var21 crm:P92F.brought_into_existence $param.}
+UNION{ $var21 crm:P92F.brought_into_existence $var22 . $var22 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P68B.use_foreseen_by $var16.
+ $var16 crm:P33B.was_used_by $var17.
+{ $var17 crm:P92F.brought_into_existence $param.}
+UNION{ $var17 crm:P92F.brought_into_existence $var18 . $var18 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P127B.has_narrower_term $var13.
+{ $var13 crm:P2B.is_type_of $var14.}
+UNION{ $var13 crm:P2B.is_type_of $tempvar15.$tempvar15 crm:P5B.forms_part_of $var14.}
+{ $var14 crm:P44B.is_condition_of $param.}
+UNION{ $var14 crm:P44B.is_condition_of $var15 . $var15 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P2B.is_type_of $var11.}
+UNION{$uri  crm:P2B.is_type_of $tempvar12.$tempvar12 crm:P5B.forms_part_of $var11.}
+{ $var11 crm:P44B.is_condition_of $param.}
+UNION{ $var11 crm:P44B.is_condition_of $var12 . $var12 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P127B.has_narrower_term $var8.
+ $var8 crm:P126B.was_employed_in $var9.
+{ $var9 crm:P92F.brought_into_existence $param.}
+UNION{ $var9 crm:P92F.brought_into_existence $var10 . $var10 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P126B.was_employed_in $var6.
+{ $var6 crm:P92F.brought_into_existence $param.}
+UNION{ $var6 crm:P92F.brought_into_existence $var7 . $var7 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P127B.has_narrower_term $var4.
+{ $var4 crm:P45B.is_incorporated_in $param.}
+UNION{ $var4 crm:P45B.is_incorporated_in $var5 . $var5 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P45B.is_incorporated_in $param.}
+UNION{$uri  crm:P45B.is_incorporated_in $var3 . $var3 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P127B.has_narrower_term $var1.
+{ $var1 crm:P2B.is_type_of $param.}
+UNION{ $var1 crm:P2B.is_type_of $var2 . $var2 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P2B.is_type_of $param.}
+UNION{$uri  crm:P2B.is_type_of $var0 . $var0 crm:F4B.is_component_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

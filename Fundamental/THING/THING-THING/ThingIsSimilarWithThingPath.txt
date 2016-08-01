@@ -1,0 +1,6 @@
+E70.Thing -- { (P130F.shows_features_of) [0,n] OR (P130B.features_are_also_found_on) [0,n]  }    -> E70.Thing:
+{ E70.Thing 
+OR
+E70.Thing -- L54B.is_same-as -> D38.Same-as :
+{ D38.Same-as -- L54F.is_same-as ->E70.Thing }
+}

@@ -1,0 +1,18 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E39.Actor.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P107B.is_current_or_former_member_of $var2.
+{ $var2 crm:P92B.was_brought_into_existence_by $var3.}
+UNION{ $var2 crm:P92B.was_brought_into_existence_by $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+{ $var3 crm:P4F.has_time-span $Endvar.}
+UNION{ $var3 crm:P4F.has_time-span $var4 . $var4 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P92B.was_brought_into_existence_by $var0.}
+UNION{$StartVar  crm:P92B.was_brought_into_existence_by $tempvar1.$tempvar1 crm:P9B.forms_part_of $var0.}
+{ $var0 crm:P4F.has_time-span $Endvar.}
+UNION{ $var0 crm:P4F.has_time-span $var1 . $var1 crm:P86F.falls_within $Endvar.}
+ }
+
+}

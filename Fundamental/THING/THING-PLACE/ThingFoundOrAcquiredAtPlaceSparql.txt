@@ -1,0 +1,18 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+{$StartVar  crm:P24B.changed_ownership_through $var5.}
+UNION{$StartVar  crm:P24B.changed_ownership_through $tempvar6.$tempvar6 crm:P9B.forms_part_of $var5.}
+{ $var5 crm:P7F.took_place_at $Endvar.}
+UNION{ $var5 crm:P7F.took_place_at $var6. $var6 crm:P89F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F4B.is_component_of $var7.
+{ $var7 crm:P24B.changed_ownership_through $var8.}
+UNION{ $var7 crm:P24B.changed_ownership_through $tempvar9.$tempvar9 crm:P9B.forms_part_of $var8.}
+{ $var8 crm:P7F.took_place_at $Endvar.}
+UNION{ $var8 crm:P7F.took_place_at $var9. $var9 crm:P89F.falls_within $Endvar.}
+ }
+
+}

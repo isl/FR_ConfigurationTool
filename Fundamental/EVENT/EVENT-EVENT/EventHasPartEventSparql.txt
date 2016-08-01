@@ -1,0 +1,35 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E5.Event.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P10B.contains $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P114F.is_equal_in_time_to $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P117B.includes $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P118B.is_overlapped_in_time_by $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P118F.overlaps_in_time_with $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P119B.is_met_in_time_by $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P119F.meets_in_time_with $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P9F.consists_of $Endvar.
+ }
+
+}

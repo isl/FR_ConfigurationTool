@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Place</object>
+ <name>from</name>
+ <label>from</label>
+ <query>
+<![CDATA[  
+$uri  crm:F8F.Thing_from_Place $param.
+
+ ]]></query>
+ </relation>

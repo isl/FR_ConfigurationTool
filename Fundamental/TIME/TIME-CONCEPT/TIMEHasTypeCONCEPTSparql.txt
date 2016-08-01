@@ -1,0 +1,5 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E52.Time-Span.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{$StartVar  crm:P2F.has_type $Endvar.}
+UNION{$StartVar  crm:P2F.has_type $tempvar1.{$tempvar1  crm:P127F.has_broader_term $Endvar.} UNION{ $tempvar1 crm:P2B.is_type_of $Endvar.}}
+}

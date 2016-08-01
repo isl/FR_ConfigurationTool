@@ -1,0 +1,29 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+{$StartVar  crm:P51F.has_former_or_current_owner $Endvar.}
+UNION{$StartVar  crm:P51F.has_former_or_current_owner $var0. $var0 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P46F.is_composed_of $var1.
+{ $var1 crm:P51F.has_former_or_current_owner $Endvar.}
+UNION{ $var1 crm:P51F.has_former_or_current_owner $var2. $var2 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P24B.changed_ownership_through $var3.}
+UNION{$StartVar  crm:P24B.changed_ownership_through $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+{ $var3 crm:P14F.carried_out_by $Endvar.}
+UNION{ $var3 crm:P14F.carried_out_by $var4. $var4 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P46F.is_composed_of $var5.
+{ $var5 crm:P24B.changed_ownership_through $var6.}
+UNION{ $var5 crm:P24B.changed_ownership_through $tempvar7.$tempvar7 crm:P9B.forms_part_of $var6.}
+{ $var6 crm:P14F.carried_out_by $Endvar.}
+UNION{ $var6 crm:P14F.carried_out_by $var7. $var7 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+}

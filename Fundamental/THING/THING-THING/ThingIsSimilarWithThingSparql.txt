@@ -1,0 +1,30 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }
+
+{
+$StartVar  crm:P130B.features_are_also_found_on $var3.
+ $var3 crmdig:L54B.is_same-as $var4.
+ $var4 crmdig:L54F.is_same-as $Endvar .
+ }
+
+ UNION {  
+$StartVar  crm:P130F.shows_features_of $var1.
+ $var1 crmdig:L54B.is_same-as $var2.
+ $var2 crmdig:L54F.is_same-as $Endvar .
+ }
+
+ UNION {  
+$StartVar  crmdig:L54B.is_same-as $var0.
+ $var0 crmdig:L54F.is_same-as $Endvar .
+ }
+
+ UNION {  
+$StartVar  crm:P130B.features_are_also_found_on $Endvar.
+ }
+
+ UNION {  
+$StartVar  crm:P130F.shows_features_of $Endvar.
+ }
+
+}

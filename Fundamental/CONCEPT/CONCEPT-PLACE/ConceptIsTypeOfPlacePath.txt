@@ -1,0 +1,5 @@
+E55.Type -- (P127B.has_narrower_term)[0,n]-> E55.Type: 
+ 	{E55.Type --P2B.is_type_of->E53.Place:
+{ E53.Place  -- (P89F.falls_within)[0,n]-> E53.Place 
+}
+}

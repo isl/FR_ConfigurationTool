@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Actor</subject>
+ <object>Actor</object>
+ <name>is member of</name>
+ <label>is member of</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P107B.is_current_or_former_member_of $var2.
+ $var2 crm:P143B.was_joined_by $var3.
+{ $var3 crm:P144F.joined_with $param.}
+UNION{ $var3 crm:P144F.joined_with $var4 . $var4 crm:P107B.is_current_or_former_member_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P143B.was_joined_by $var0.
+{ $var0 crm:P144F.joined_with $param.}
+UNION{ $var0 crm:P144F.joined_with $var1 . $var1 crm:P107B.is_current_or_former_member_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P107B.is_current_or_former_member_of $param.
+ }
+
+
+ ]]></query>
+ </relation>

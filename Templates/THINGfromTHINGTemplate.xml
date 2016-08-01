@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Thing</object>
+ <name>from</name>
+ <label>from</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:F4B.is_component_of $var8.
+{ $var8 crm:P123B.resulted_from $var9.}
+UNION{ $var8 crm:P123B.resulted_from $tempvar10.$tempvar10 crm:P9B.forms_part_of $var9.}
+{ $var9 crm:P124F.transformed $param.}
+UNION{ $var9 crm:P124F.transformed $var10 . $var10 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P123B.resulted_from $var6.}
+UNION{$uri  crm:P123B.resulted_from $tempvar7.$tempvar7 crm:P9B.forms_part_of $var6.}
+{ $var6 crm:P124F.transformed $param.}
+UNION{ $var6 crm:P124F.transformed $var7 . $var7 crm:F4B.is_component_of $param.}
+ }
+
+ UNION {  
+$uri  crm:F4B.is_component_of $var4.
+{ $var4 crm:P31B.was_modified_by $var5.}
+UNION{ $var4 crm:P31B.was_modified_by $tempvar6.$tempvar6 crm:P9B.forms_part_of $var5.}
+ $var5 crm:P112F.diminished $param .
+ }
+
+ UNION {  
+{$uri  crm:P31B.was_modified_by $var3.}
+UNION{$uri  crm:P31B.was_modified_by $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+ $var3 crm:P112F.diminished $param .
+ }
+
+ UNION {  
+$uri  crm:F4B.is_component_of $var1.
+{ $var1 crm:P31B.was_modified_by $var2.}
+UNION{ $var1 crm:P31B.was_modified_by $tempvar3.$tempvar3 crm:P9B.forms_part_of $var2.}
+ $var2 crm:P110F.augmented $param .
+ }
+
+ UNION {  
+{$uri  crm:P31B.was_modified_by $var0.}
+UNION{$uri  crm:P31B.was_modified_by $tempvar1.$tempvar1 crm:P9B.forms_part_of $var0.}
+ $var0 crm:P110F.augmented $param .
+ }
+
+ UNION {  
+$uri  crm:F4B.is_component_of $param.
+ }
+
+
+ ]]></query>
+ </relation>

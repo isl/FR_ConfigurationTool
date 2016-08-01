@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Thing</object>
+ <name>is origin of</name>
+ <label>is origin of</label>
+ <query>
+<![CDATA[  
+$uri  crm:F10B.Event_is_origin_of_Thing $param.
+
+ ]]></query>
+ </relation>

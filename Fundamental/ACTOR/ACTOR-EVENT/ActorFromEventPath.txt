@@ -1,0 +1,5 @@
+{E39.Actor--(P107B.is_current_or_former_member)[0,n]-> E39.Actor:
+	{E39.Actor --{P95.was_formed_by OR P98B.was_born}  ->E63.Beginning_of_Existence:
+{E63.Beginning_of_Existence --(P9B.forms_part_of)[0,n] ->E5.Event 
+}
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Type</subject>
+ <object>Actor</object>
+ <name>is type of</name>
+ <label>is type of</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P127B.has_narrower_term $var1.
+{ $var1 crm:P2B.is_type_of $param.}
+UNION{ $var1 crm:P2B.is_type_of $var2 . $var2 crm:P107B.is_current_or_former_member_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P2B.is_type_of $param.}
+UNION{$uri  crm:P2B.is_type_of $var0 . $var0 crm:P107B.is_current_or_former_member_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

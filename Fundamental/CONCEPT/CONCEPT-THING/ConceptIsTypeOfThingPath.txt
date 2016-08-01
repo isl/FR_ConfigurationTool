@@ -1,0 +1,5 @@
+E55.Type --(P127B.has_narrower_term)[0,n]-> E55.Type: 
+ 	{E55.Type --P2B.is_type_of->E70.Thing:
+{E70.Thing --  (F4B.is_component_of) [0,n] -> E70.Thing 
+}
+}

@@ -1,0 +1,74 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+{$StartVar  crm:P62F.depicts $Endvar.}
+UNION{$StartVar  crm:P62F.depicts $var34. $var34 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F5F.consists_of_shows_features_of $var35.
+{ $var35 crm:P62F.depicts $Endvar.}
+UNION{ $var35 crm:P62F.depicts $var36. $var36 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P67F.refers_to $Endvar.}
+UNION{$StartVar  crm:P67F.refers_to $var37. $var37 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F5F.consists_of_shows_features_of $var38.
+{ $var38 crm:P67F.refers_to $Endvar.}
+UNION{ $var38 crm:P67F.refers_to $var39. $var39 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P128F.carries $var40.
+{ $var40 crm:P67F.refers_to $Endvar.}
+UNION{ $var40 crm:P67F.refers_to $var41. $var41 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F5F.consists_of_shows_features_of $var42.
+ $var42 crm:P128F.carries $var43.
+{ $var43 crm:P67F.refers_to $Endvar.}
+UNION{ $var43 crm:P67F.refers_to $var44. $var44 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crmdig:L11B.was_output_of $var45.}
+UNION{$StartVar  crmdig:L11B.was_output_of $tempvar46.$tempvar46 crm:P9B.forms_part_of $var45.}
+ $var45 crmdig:L1F.digitized $var46.
+{ $var46 crm:P62F.depicts $Endvar.}
+UNION{ $var46 crm:P62F.depicts $var47. $var47 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F5F.consists_of_shows_features_of $var48.
+{ $var48 crmdig:L11B.was_output_of $var49.}
+UNION{ $var48 crmdig:L11B.was_output_of $tempvar50.$tempvar50 crm:P9B.forms_part_of $var49.}
+ $var49 crmdig:L1F.digitized $var50.
+{ $var50 crm:P62F.depicts $Endvar.}
+UNION{ $var50 crm:P62F.depicts $var51. $var51 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crmdig:L11B.was_output_of $var52.}
+UNION{$StartVar  crmdig:L11B.was_output_of $tempvar53.$tempvar53 crm:P9B.forms_part_of $var52.}
+ $var52 crmdig:L1F.digitized $var53.
+ $var53 crm:P128F.carries $var54.
+{ $var54 crm:P67F.refers_to $Endvar.}
+UNION{ $var54 crm:P67F.refers_to $var55. $var55 crm:P9B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F5F.consists_of_shows_features_of $var56.
+{ $var56 crmdig:L11B.was_output_of $var57.}
+UNION{ $var56 crmdig:L11B.was_output_of $tempvar58.$tempvar58 crm:P9B.forms_part_of $var57.}
+ $var57 crmdig:L1F.digitized $var58.
+ $var58 crm:P128F.carries $var59.
+{ $var59 crm:P67F.refers_to $Endvar.}
+UNION{ $var59 crm:P67F.refers_to $var60. $var60 crm:P9B.forms_part_of $Endvar.}
+ }
+
+}

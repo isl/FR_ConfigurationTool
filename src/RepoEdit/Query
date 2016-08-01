@@ -1,0 +1,12 @@
+BASE <http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CIDOC-CRM.rdfs#>
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX crm: <http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CIDOC-CRM.rdfs#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX crmdig: <http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#> 
+
+ASK
+	{
+		crm:E53.Place rdfs:subClassOf crm:E1.CRM_Entity
+	}

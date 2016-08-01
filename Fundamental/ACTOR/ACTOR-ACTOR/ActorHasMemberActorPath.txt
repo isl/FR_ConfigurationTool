@@ -1,0 +1,9 @@
+E74.Group--(P107F.has_current_or_former_member)[0,n]-> E39.Actor :
+{E39.Actor
+OR
+E74.Group --P144B.gained_member_by -> E85.Joining:
+{E85.Joining --P143F.joined -> E39.Actor:
+ {E39.Actor-- (P107F.has_current_or_former_member)[0,n]->E39.Actor
+}
+}
+}

@@ -1,0 +1,29 @@
+E39.Actor--(P107B.is_current_or_former_member_of)[0,n]-> E39.Actor:
+{
+E39.Actor -- P62B.is_depicted_by -> E24.Physical_Man-Made_Thing:
+{ E24.Physical_Man-Made_Thing -- (P46B.forms_part_of) [0,n] -> E24.Physical_Man-Made_Thing: 	
+{ E24.Physical_Man-Made_Thing -- P53F.has_former_or_current_location -> E53.Place:
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place 
+}
+OR 
+E24.Physical_Man-Made_Thing -- P108B.was_produced_by -> E12.Production: 
+{ E12.Production --(P9B.forms_part_of)[0,n]-> E5.Event:
+{ E5.Event -- P7F.took_place_at ->E53.Place: 
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place 
+}}}}}
+
+
+OR E39.Actor -- P67B.is_referred_to_by  -> E89.Propositional_Object: 
+{E73.Information_Object -- P94B.was_created_by -> E65.Creation: 
+{E65.Creation --( P9B.forms_part_of)[0,n] ->E5.Event:
+{E5.Event -- P7F.took_place_at ->E53.Place:
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place 
+}}}
+ OR 
+E73.Information_Object -- P128B.is_carried_by -> E24.Physical_Man-Made_Thing: 
+{ E24.Physical_Man-Made_Thing -- (P46B.forms_part_of) [0,n] ->   E18.Physical_Thing: 
+{E18.Physical_Thing -- P53F.has_former_or_current_location -> E53.Place : 
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place 
+}}}}
+
+}

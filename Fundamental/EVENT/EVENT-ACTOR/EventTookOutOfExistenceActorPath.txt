@@ -1,0 +1,5 @@
+E5.Event--(P9F.consists_of)[0,n] -> E5.Event:
+{E64.End_of_Existence -- P93F.took_out_of_existence -> E39.Actor:
+{ E39.Actor --(P107F.has_current_or_former_member_of)[0,n]  -> E39.Actor 
+}
+}

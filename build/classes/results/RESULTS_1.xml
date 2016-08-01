@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='q'/>
+	</head>
+	<results>
+		<result>
+			<binding name='q'>
+				<uri>http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CIDOC-CRM.rdfs#E1.CRM_Entity</uri>
+			</binding>
+		</result>
+	</results>
+</sparql>

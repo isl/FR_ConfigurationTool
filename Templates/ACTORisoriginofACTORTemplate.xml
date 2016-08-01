@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Actor</subject>
+ <object>Actor</object>
+ <name>is origin of</name>
+ <label>is origin of</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P107F.has_current_or_former_member $var5.
+{ $var5 crm:P14B.performed $var6.}
+UNION{ $var5 crm:P14B.performed $tempvar7.$tempvar7 crm:P9B.forms_part_of $var6.}
+{ $var6 crm:P95F.has_formed $param.}
+UNION{ $var6 crm:P95F.has_formed $var7 . $var7 crm:P107F.has_current_or_former_member $param.}
+ }
+
+ UNION {  
+{$uri  crm:P14B.performed $var3.}
+UNION{$uri  crm:P14B.performed $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+{ $var3 crm:P95F.has_formed $param.}
+UNION{ $var3 crm:P95F.has_formed $var4 . $var4 crm:P107F.has_current_or_former_member $param.}
+ }
+
+ UNION {  
+$uri  crm:P107F.has_current_or_former_member $var1.
+{ $var1 crm:P97B.was_father_for $var2
+}UNION{ $var1 crm:P96B.gave_birth $var2
+} $var2 crm:P98F.brought_into_life $param .
+ }
+
+ UNION {  
+{ $uri crm:P97B.was_father_for $var0
+}UNION{ $uri crm:P96B.gave_birth $var0
+} $var0 crm:P98F.brought_into_life $param .
+ }
+
+
+ ]]></query>
+ </relation>

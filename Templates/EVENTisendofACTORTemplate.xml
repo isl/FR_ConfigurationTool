@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Actor</object>
+ <name>is end of</name>
+ <label>is end of</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P9F.consists_of $var1.
+{ $var1 crm:P93F.took_out_of_existence $param.}
+UNION{ $var1 crm:P93F.took_out_of_existence $var2 . $var2 crm:P107F.has_current_or_former_member $param.}
+ }
+
+ UNION {  
+{$uri  crm:P93F.took_out_of_existence $param.}
+UNION{$uri  crm:P93F.took_out_of_existence $var0 . $var0 crm:P107F.has_current_or_former_member $param.}
+ }
+
+
+ ]]></query>
+ </relation>

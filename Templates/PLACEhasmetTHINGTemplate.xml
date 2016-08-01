@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Place</subject>
+ <object>Thing</object>
+ <name>has met</name>
+ <label>has met</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P89B.contains $var1.
+ $var1 crm:P7B.witnessed $var2.
+ $var2 crm:F18B.Event_P31_P16_P39_P92_Thing $param .
+ }
+
+ UNION {  
+$uri  crm:P7B.witnessed $var0.
+ $var0 crm:F18B.Event_P31_P16_P39_P92_Thing $param .
+ }
+
+ UNION{
+$uri  crm:F8B.Place_Hosts_Thing $param 
+ }
+ 
+ ]]></query>
+ </relation>

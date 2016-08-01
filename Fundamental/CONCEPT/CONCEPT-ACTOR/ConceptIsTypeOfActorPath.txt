@@ -1,0 +1,5 @@
+E55.Type -- (P127B.has_narrower_term)[0,n]-> E55.Type: 
+ 	{E55.Type --P2B.is_type_of->E39.Actor:
+{E39.Actor -- (P107B.is_current_or_former_member_of )[0,n]-> E39.Actor
+}
+}

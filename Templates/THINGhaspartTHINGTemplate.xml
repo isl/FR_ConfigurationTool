@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Thing</object>
+ <name>has part</name>
+ <label>has part</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:F4F.is_composed_of $var1.
+{ $var1 crm:P110B.was_augmented_by $var2.}
+UNION{ $var1 crm:P110B.was_augmented_by $tempvar3.$tempvar3 crm:P9B.forms_part_of $var2.}
+ $var2 crm:P111F.added $param .
+ }
+
+ UNION {  
+{$uri  crm:P110B.was_augmented_by $var0.}
+UNION{$uri  crm:P110B.was_augmented_by $tempvar1.$tempvar1 crm:P9B.forms_part_of $var0.}
+ $var0 crm:P111F.added $param .
+ }
+
+ UNION {  
+$uri  crm:F4F.is_composed_of $param.
+ }
+
+
+ ]]></query>
+ </relation>

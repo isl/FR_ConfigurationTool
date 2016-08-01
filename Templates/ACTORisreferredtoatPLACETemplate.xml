@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Actor</subject>
+ <object>Place</object>
+ <name>is referred to at</name>
+ <label>is referred to at</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P107B.is_current_or_former_member_of $var4.
+ $var4 crm:F10F.Thing_createdIn_Event $var5.
+ $var5 crm:F12F.Event_from_Place $param .
+ }
+
+ UNION {  
+$uri  crm:F10F.Thing_createdIn_Event $var3.
+ $var3 crm:F12F.Event_from_Place $param .
+ }
+
+ UNION {  
+$uri  crm:P107B.is_current_or_former_member_of $var1.
+ $var1 crm:F15B.is_referred_to_by $var2.
+ $var2 crm:F6F.has_location $param .
+ }
+
+ UNION {  
+$uri  crm:F15B.is_referred_to_by $var0.
+ $var0 crm:F6F.has_location $param .
+ }
+
+
+ ]]></query>
+ </relation>

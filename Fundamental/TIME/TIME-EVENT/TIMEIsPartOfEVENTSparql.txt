@@ -1,0 +1,14 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E52.Time-Span.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P86F.falls_within $var1.
+{ $var1 crm:P4B.is_time-span_of $Endvar.}
+UNION{ $var1 crm:P4B.is_time-span_of $tempvar3.{$tempvar3  crm:P9B.forms_part_of $Endvar.} UNION{ $tempvar3 crm:P119F.meets_in_time_with $Endvar.} UNION{ $tempvar3 crm:P119B.is_met_in_time_by $Endvar.} UNION{ $tempvar3 crm:P118F.overlaps_in_time_with $Endvar.} UNION{ $tempvar3 crm:P118B.is_overlapped_in_time_by $Endvar.} UNION{ $tempvar3 crm:P117F.occurs_during $Endvar.} UNION{ $tempvar3 crm:P114F.is_equal_in_time_to $Endvar.} UNION{ $tempvar3 crm:P10F.falls_within $Endvar.} UNION{ $tempvar3 crm:P115F.finishes $Endvar.} UNION{ $tempvar3 crm:P116F.starts $Endvar.}}
+ }
+
+ UNION {  
+{$StartVar  crm:P4B.is_time-span_of $Endvar.}
+UNION{$StartVar  crm:P4B.is_time-span_of $tempvar1.{$tempvar1  crm:P9B.forms_part_of $Endvar.} UNION{ $tempvar1 crm:P119F.meets_in_time_with $Endvar.} UNION{ $tempvar1 crm:P119B.is_met_in_time_by $Endvar.} UNION{ $tempvar1 crm:P118F.overlaps_in_time_with $Endvar.} UNION{ $tempvar1 crm:P118B.is_overlapped_in_time_by $Endvar.} UNION{ $tempvar1 crm:P117F.occurs_during $Endvar.} UNION{ $tempvar1 crm:P114F.is_equal_in_time_to $Endvar.} UNION{ $tempvar1 crm:P10F.falls_within $Endvar.} UNION{ $tempvar1 crm:P115F.finishes $Endvar.} UNION{ $tempvar1 crm:P116F.starts $Endvar.}}
+ }
+
+}

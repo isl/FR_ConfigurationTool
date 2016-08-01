@@ -1,0 +1,2 @@
+E55.Type --  (P2B.is_type_of)[0,n]-> E55.Type: 
+{E55.Type --P2B.is_type_of-> E52.Time-Span}

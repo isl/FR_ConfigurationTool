@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Actor</subject>
+ <object>Type</object>
+ <name>has type</name>
+ <label>has type</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P107F.has_current_or_former_member $var1.
+{ $var1 crm:P2F.has_type $param.}
+UNION{ $var1 crm:P2F.has_type $var2 . $var2 crm:P127F.has_broader_term $param.}
+ }
+
+ UNION {  
+{$uri  crm:P2F.has_type $param.}
+UNION{$uri  crm:P2F.has_type $var0 . $var0 crm:P127F.has_broader_term $param.}
+ }
+
+
+ ]]></query>
+ </relation>

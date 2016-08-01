@@ -1,0 +1,31 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E39.Actor.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P107F.has_current_or_former_member $var5.
+{ $var5 crm:P14B.performed $var6.}
+UNION{ $var5 crm:P14B.performed $tempvar7.$tempvar7 crm:P9B.forms_part_of $var6.}
+{ $var6 crm:P95F.has_formed $Endvar.}
+UNION{ $var6 crm:P95F.has_formed $var7 . $var7 crm:P107F.has_current_or_former_member $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P14B.performed $var3.}
+UNION{$StartVar  crm:P14B.performed $tempvar4.$tempvar4 crm:P9B.forms_part_of $var3.}
+{ $var3 crm:P95F.has_formed $Endvar.}
+UNION{ $var3 crm:P95F.has_formed $var4 . $var4 crm:P107F.has_current_or_former_member $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P107F.has_current_or_former_member $var1.
+{ $var1 crm:P97B.was_father_for $var2
+}UNION{ $var1 crm:P96B.gave_birth $var2
+} $var2 crm:P98F.brought_into_life $Endvar .
+ }
+
+ UNION {  
+{ $StartVar crm:P97B.was_father_for $var0
+}UNION{ $StartVar crm:P96B.gave_birth $var0
+} $var0 crm:P98F.brought_into_life $Endvar .
+ }
+
+}

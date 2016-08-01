@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Actor</subject>
+ <object>Event</object>
+ <name>from</name>
+ <label>from</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P107B.is_current_or_former_member_of $var1.
+{ { $var1 crm:P95B.was_formed_by $param.
+}UNION{ $var1 crm:P98B.was_born $param.}
+}
+UNION{{ $var1 crm:P95B.was_formed_by $var2
+}UNION{ $var1 crm:P98B.was_born $var2
+} $var2 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+{ { $uri crm:P95B.was_formed_by $param.
+}UNION{ $uri crm:P98B.was_born $param.}
+}
+UNION{{ $uri crm:P95B.was_formed_by $var0
+}UNION{ $uri crm:P98B.was_born $var0
+} $var0 crm:P9B.forms_part_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

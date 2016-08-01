@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Place</object>
+ <name>is or was located in</name>
+ <label>is or was located in</label>
+ <query>
+<![CDATA[  
+$uri  crm:F6F.has_location $param.
+
+ ]]></query>
+ </relation>

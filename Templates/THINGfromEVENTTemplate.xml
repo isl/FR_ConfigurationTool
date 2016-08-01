@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Event</object>
+ <name>from</name>
+ <label>from</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:F4B.is_component_of $var13.
+{ $var13 crm:P147B.was_curated_by $param.}
+UNION{ $var13 crm:P147B.was_curated_by $var14 . $var14 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P147B.was_curated_by $param.}
+UNION{$uri  crm:P147B.was_curated_by $var12 . $var12 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+$uri  crm:F4B.is_component_of $var10.
+{ $var10 crm:P113B.was_removed_by $param.}
+UNION{ $var10 crm:P113B.was_removed_by $var11 . $var11 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P113B.was_removed_by $param.}
+UNION{$uri  crm:P113B.was_removed_by $var9 . $var9 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+$uri  crm:F4B.is_component_of $var7.
+{ $var7 crm:P19B.was_made_for $param.}
+UNION{ $var7 crm:P19B.was_made_for $var8 . $var8 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P19B.was_made_for $param.}
+UNION{$uri  crm:P19B.was_made_for $var6 . $var6 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+$uri  crm:F4B.is_component_of $var4.
+{ $var4 crm:P30B.custody_transferred_through $param.}
+UNION{ $var4 crm:P30B.custody_transferred_through $var5 . $var5 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P30B.custody_transferred_through $param.}
+UNION{$uri  crm:P30B.custody_transferred_through $var3 . $var3 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+$uri  crm:F4B.is_component_of $var1.
+{ $var1 crm:P12B.was_present_at $param.}
+UNION{ $var1 crm:P12B.was_present_at $var2 . $var2 crm:P9B.forms_part_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P12B.was_present_at $param.}
+UNION{$uri  crm:P12B.was_present_at $var0 . $var0 crm:P9B.forms_part_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

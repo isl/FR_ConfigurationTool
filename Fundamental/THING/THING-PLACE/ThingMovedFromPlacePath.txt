@@ -1,0 +1,7 @@
+E70.Thing -- (F4B.is_component_of)[0,n]  -> E70.Thing:
+{E19.Physical_Object  --P25B.moved_by -> E9.Move :
+{ E9.Move --  P27F.moved_from -> E53.Place: 
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place  
+}
+      }
+	}

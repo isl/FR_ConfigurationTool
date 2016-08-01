@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Thing</subject>
+ <object>Place</object>
+ <name>moved from</name>
+ <label>moved from</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:F4B.is_component_of $var2.
+ $var2 crm:P25B.moved_by $var3.
+{ $var3 crm:P27F.moved_from $param.}
+UNION{ $var3 crm:P27F.moved_from $var4 . $var4 crm:P89F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P25B.moved_by $var0.
+{ $var0 crm:P27F.moved_from $param.}
+UNION{ $var0 crm:P27F.moved_from $var1 . $var1 crm:P89F.falls_within $param.}
+ }
+
+
+ ]]></query>
+ </relation>

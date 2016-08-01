@@ -1,0 +1,7 @@
+E53.Place--(P89B.contains) [0,n]  -> E53.Place:
+{E53.Place --P7B.witnessed->E5.Event:
+{E5.Event --(P9F.consists_of)[0,n]-> E5.Event:
+{E5.Event--P92F.brought_into_existence->  E70.Thing:
+{ E70.Thing --(F4B.is_component_of)[0,n]-> E70.Thing
+}}}}
+

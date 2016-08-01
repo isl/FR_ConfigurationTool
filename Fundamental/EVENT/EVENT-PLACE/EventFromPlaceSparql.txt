@@ -1,0 +1,14 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E5.Event.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P9B.forms_part_of $var1.
+{ $var1 crm:P7F.took_place_at $Endvar.}
+UNION{ $var1 crm:P7F.took_place_at $var2 . $var2 crm:P89F.falls_within $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P7F.took_place_at $Endvar.}
+UNION{$StartVar  crm:P7F.took_place_at $var0 . $var0 crm:P89F.falls_within $Endvar.}
+ }
+
+}

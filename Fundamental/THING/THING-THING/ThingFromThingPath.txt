@@ -1,0 +1,17 @@
+E70.Thing --  (F4B.is_component_of)[0,n] -> E70.Thing:
+{E70.Thing 
+OR
+E18.Physical_Thing -- P123B.resulted_from -> E81.Transformation :
+{ E81.Transformation -- (P9B.forms_part_of) [0,n] -> E81.Transformation:
+{ E81.Transformation -- P124F.transformed -> E70.Thing :
+{E70.Thing --  (F4B.is_component_of)[0,n] -> E70.Thing 
+}}}
+OR
+E24.Physical_Man-Made_Thing -- P31B.was_modified_by-> E11.Modification:
+{ E11.Modification-- (P9B.forms_part_of) [0,n] -> E7.Activity:
+{E7.Activity -- P110F.augmented-> E70.Thing
+OR
+E7.Activity -- P112F.diminished-> E18.Physical_Thing
+}
+}
+}

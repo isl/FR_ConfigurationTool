@@ -1,0 +1,15 @@
+E39.Actor --(P107F.has_current_or_former_member)[0,n]->E39.Actor:
+{E39.Actor -- P14B.performed -> E7.Activity:
+{E7.Activity -- (P9F.consists_of)[0,n]-> E5.Event:
+{E7.Activity--P92F.brought_into_existence -> E70.Thing:
+{E70.Thing-- (F5F.consists_of_shows_features_of)[0,n]-> E70.Thing:
+{E24.Physical_Man-Made_Thing -- P62F.depicts -> E53.Place: 
+{E53.Place  --( P89B.contains)[0,n]-> E53.Place   }
+OR
+E89.Propositional_Object --P67F.refers_to-> E53.Place: 
+{E53.Place  --( P89B.contains)[0,n]-> E53.Place   }
+OR
+E24.Physical_Man-Made_Thing -- P128F.carries -> E73.Information_Object: 
+{E73.Information_Object -- P67F.refers_to  -> E53.Place: 
+{E53.Place  --( P89B.contains)[0,n]-> E53.Place  
+}}}}}}}

@@ -1,0 +1,5 @@
+E70.Thing -- (F4B.is_component_of)[0,n]-> E70.Thing:
+{E70.Thing-- P93B.was_taken_out_of_existence_by-> E64.End_of_Existence:
+{E64.End_of_Existence --(P9B.forms_part_of)[0,n]->E5.Event 
+}
+}

@@ -1,0 +1,10 @@
+E53.Place--(P89B.contains)[0,n]->E53.Place
+	E53.Place--P53B.is_former_or_current_location_of->E24.Physical_Man-Made_Thing
+		E24.Physical_Man-Made_Thing--F15F.refers_to->E5.Event
+			E5.Event--(P9F.consists_of)[0,n]->E5.Event
+	OR
+	E53.Place--P7B.witnessed->E5.Event
+		E5.Event--(P9F.consists_of)[0,n]->E5.Event
+			E5.Event--P92F.brought_into_existence->E70.Thing
+				E70.Thing--F15F.refers_to->E5.Event
+					E5.Event--(P9F.consists_of)[0,n]->E5.Event

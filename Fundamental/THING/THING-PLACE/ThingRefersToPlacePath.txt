@@ -1,0 +1,50 @@
+E70.Thing --(F5F.consists_of_shows_features_of)[0,n]-> E70.Thing:
+{E24.Physical_Man-Made_Thing -- P62F.depicts -> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place 
+} 
+
+OR
+E89.Propositional_Object -- P67F.refers_to-> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place 
+} 
+
+OR
+E24.Physical_Man-Made_Thing -- P62F.depicts -> E26.Physical_Feature:
+{E26.Physical_Feature--P53F.has_former_or_current_location ->  E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place  
+} 
+ }
+OR
+E89.Propositional_Object --P67F.refers_to  -> E26.Physical_Feature:
+{E26.Physical_Feature--P53F.has_former_or_current_location -> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place 
+} 
+			}
+OR
+E24.Physical_Man-Made_Thing -- P128F.carries-> E73.Information_Object: 
+{ E73.Information_Object -- P67F.refers_to -> E26.Physical_Feature:
+{E26.Physical_Feature--P53F.has_former_or_current_location -> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place  
+} 
+   	      }
+OR
+ E73.Information_Object -- P67F.refers_to -> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place  
+} 
+ }
+OR
+D1.Digital_Object -- L11B.was_output_of -> D7.Digital_Machine_Event:
+{D7.Digital_Machine_Event --(P9B.forms_part_of)[0,n] -> D2.Digitization_Process : 
+{D2.Digitization_Process -- L1F.digitized -> E18.Physical_Thing:
+{E26.Physical_Feature--P53F.has_former_or_current_location -> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place  
+}		 
+OR 
+E24.Physical_Man-Made_Thing -- P62F.depicts -> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place  
+} 
+OR 
+E24.Physical_Man-Made_Thing  -- P128F.carries -> E73.Information_Object:
+{ E73.Information_Object --P67F.refers_to -> E53.Place:
+{E53.Place--(P89B.contains)[0,n] -> E53.Place  
+} }}}}	}

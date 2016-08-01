@@ -1,0 +1,80 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E53.Place.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P89B.contains $var20.
+{ $var20 crm:P7B.witnessed $var21.}
+UNION{ $var20 crm:P7B.witnessed $tempvar22.$tempvar22 crm:P9F.consists_of $var21.}
+{ $var21 crm:P25F.moved $Endvar.}
+UNION{ $var21 crm:P25F.moved $var22 . $var22 crm:P46B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P7B.witnessed $var18.}
+UNION{$StartVar  crm:P7B.witnessed $tempvar19.$tempvar19 crm:P9F.consists_of $var18.}
+{ $var18 crm:P25F.moved $Endvar.}
+UNION{ $var18 crm:P25F.moved $var19 . $var19 crm:P46B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P89B.contains $var15.
+{ $var15 crm:P7B.witnessed $var16.}
+UNION{ $var15 crm:P7B.witnessed $tempvar17.$tempvar17 crm:P9F.consists_of $var16.}
+{ $var16 crm:P31F.has_modified $Endvar.}
+UNION{ $var16 crm:P31F.has_modified $var17 . $var17 crm:F4B.is_component_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P7B.witnessed $var13.}
+UNION{$StartVar  crm:P7B.witnessed $tempvar14.$tempvar14 crm:P9F.consists_of $var13.}
+{ $var13 crm:P31F.has_modified $Endvar.}
+UNION{ $var13 crm:P31F.has_modified $var14 . $var14 crm:F4B.is_component_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P89B.contains $var10.
+{ $var10 crm:P7B.witnessed $var11.}
+UNION{ $var10 crm:P7B.witnessed $tempvar12.$tempvar12 crm:P9F.consists_of $var11.}
+{ $var11 crm:P92F.brought_into_existence $Endvar.}
+UNION{ $var11 crm:P92F.brought_into_existence $var12 . $var12 crm:F4B.is_component_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P7B.witnessed $var8.}
+UNION{$StartVar  crm:P7B.witnessed $tempvar9.$tempvar9 crm:P9F.consists_of $var8.}
+{ $var8 crm:P92F.brought_into_existence $Endvar.}
+UNION{ $var8 crm:P92F.brought_into_existence $var9 . $var9 crm:F4B.is_component_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P89B.contains $var5.
+ $var5 crm:P74B.is_current_or_former_residence_of $var6.
+{ { $var6 crm:P49B.is_former_or_current_keeper_of $Endvar.
+}UNION{ $var6 crm:P51B.is_former_or_current_owner_of $Endvar.}
+}
+UNION{{ $var6 crm:P49B.is_former_or_current_keeper_of $var7
+}UNION{ $var6 crm:P51B.is_former_or_current_owner_of $var7
+} $var7 crm:P46B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P74B.is_current_or_former_residence_of $var3.
+{ { $var3 crm:P49B.is_former_or_current_keeper_of $Endvar.
+}UNION{ $var3 crm:P51B.is_former_or_current_owner_of $Endvar.}
+}
+UNION{{ $var3 crm:P49B.is_former_or_current_keeper_of $var4
+}UNION{ $var3 crm:P51B.is_former_or_current_owner_of $var4
+} $var4 crm:P46B.forms_part_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P89B.contains $var1.
+{ $var1 crm:P53B.is_former_or_current_location_of $Endvar.}
+UNION{ $var1 crm:P53B.is_former_or_current_location_of $var2 . $var2 crm:P46F.is_composed_of $Endvar.}
+ }
+
+ UNION {  
+{$StartVar  crm:P53B.is_former_or_current_location_of $Endvar.}
+UNION{$StartVar  crm:P53B.is_former_or_current_location_of $var0 . $var0 crm:P46F.is_composed_of $Endvar.}
+ }
+
+}

@@ -1,0 +1,28 @@
+E70.Thing -- (F4B.is_component_of)[0,n]  -> E70.Thing:
+{E70.Thing --{P53F.has_former_or_current_location OR P54F.has_current_permanent_location}-> E53.Place: 
+{E53.Place  --(P89F.falls_within)[0,n]-> E53.Place  
+}
+OR        
+E70.Thing -- P92B.was_brought_into_existence_by -> E63.Beginning_of_Existence:
+{E63.Beginning_of_Existence  -- (P9B.forms_part_of) [0,n] -> E5.Event:
+{ E5.Event  -- P7F.took_place_at -> E53.Place: 
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place  
+}			
+OR    
+E7.Activity --P14F.carried_out_by ->  E39.Actor:
+{E39.Actor -- (P107B.is_current_or_former_member_of)[0,n]  -> E39.Actor:
+{E39.Actor -- P74F.has_current_or_former_residence   -> E53.Place: 
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place   
+}
+OR
+E39.Actor --P92B.was_brought_into_existence_by-> E63.Beginning_of_Existence:
+{E63.Beginning_of_Existence -- (P9B.forms_part_of) [0,n] -> E5.Event:
+{ E5.Event -- P7F.took_place_at -> E53.Place: 
+{E53.Place  --(P89F.falls_within)[0,n]   -> E53.Place  
+}}}}}}}
+OR
+E19.Physical_Object --P25B.moved_by -> E9.Move :
+{ E9.Move -- {P26F.moved_to OR P27F.moved_from} -> E53.Place: 
+{E53.Place  --( P89F.falls_within)[0,n]-> E53.Place 
+}}}
+

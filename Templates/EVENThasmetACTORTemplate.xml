@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Actor</object>
+ <name>has met</name>
+ <label>has met</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P9F.consists_of $var1.
+{ $var1 crm:P12F.occurred_in_the_presence_of $param.}
+UNION{ $var1 crm:P12F.occurred_in_the_presence_of $var2 . $var2 crm:P107B.is_current_or_former_member_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P12F.occurred_in_the_presence_of $param.}
+UNION{$uri  crm:P12F.occurred_in_the_presence_of $var0 . $var0 crm:P107B.is_current_or_former_member_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

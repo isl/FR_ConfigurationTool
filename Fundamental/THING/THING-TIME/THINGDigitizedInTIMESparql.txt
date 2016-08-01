@@ -1,0 +1,16 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+$StartVar  crm:P46B.forms_part_of $var2.
+ $var2 crmdig:L1B.was_digitized_by $var3.
+{ $var3 crm:P4F.has_time-span $Endvar.}
+UNION{ $var3 crm:P4F.has_time-span $var4 . $var4 crm:P86F.falls_within $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crmdig:L1B.was_digitized_by $var0.
+{ $var0 crm:P4F.has_time-span $Endvar.}
+UNION{ $var0 crm:P4F.has_time-span $var1 . $var1 crm:P86F.falls_within $Endvar.}
+ }
+
+}

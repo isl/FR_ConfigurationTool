@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Thing</object>
+ <name>used</name>
+ <label>used</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P9F.consists_of $var2.
+{ $var2 crm:P16F.used_specific_object $param.}
+UNION{ $var2 crm:P16F.used_specific_object $var3 . $var3 crm:F4F.is_composed_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P16F.used_specific_object $param.}
+UNION{$uri  crm:P16F.used_specific_object $var1 . $var1 crm:F4F.is_composed_of $param.}
+ }
+
+ UNION {  
+$uri  crm:P9F.consists_of $var0.
+ $var0 crm:P125F.used_object_of_type $param .
+ }
+
+ UNION {  
+$uri  crm:P125F.used_object_of_type $param.
+ }
+
+
+ ]]></query>
+ </relation>

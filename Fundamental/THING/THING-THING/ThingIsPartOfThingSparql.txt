@@ -1,0 +1,6 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }
+
+$StartVar  crm:F4B.is_component_of $Endvar.
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Time</object>
+ <name>has part</name>
+ <label>has part</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P10B.contains $var15.
+{ $var15 crm:P4F.has_time-span $param.}
+UNION{ $var15 crm:P4F.has_time-span $var16 . $var16 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P114F.is_equal_in_time_to $var13.
+{ $var13 crm:P4F.has_time-span $param.}
+UNION{ $var13 crm:P4F.has_time-span $var14 . $var14 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P117B.includes $var11.
+{ $var11 crm:P4F.has_time-span $param.}
+UNION{ $var11 crm:P4F.has_time-span $var12 . $var12 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P118B.is_overlapped_in_time_by $var9.
+{ $var9 crm:P4F.has_time-span $param.}
+UNION{ $var9 crm:P4F.has_time-span $var10 . $var10 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P118F.overlaps_in_time_with $var7.
+{ $var7 crm:P4F.has_time-span $param.}
+UNION{ $var7 crm:P4F.has_time-span $var8 . $var8 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P119B.is_met_in_time_by $var5.
+{ $var5 crm:P4F.has_time-span $param.}
+UNION{ $var5 crm:P4F.has_time-span $var6 . $var6 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P119F.meets_in_time_with $var3.
+{ $var3 crm:P4F.has_time-span $param.}
+UNION{ $var3 crm:P4F.has_time-span $var4 . $var4 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+$uri  crm:P9F.consists_of $var1.
+{ $var1 crm:P4F.has_time-span $param.}
+UNION{ $var1 crm:P4F.has_time-span $var2 . $var2 crm:P86F.falls_within $param.}
+ }
+
+ UNION {  
+{$uri  crm:P4F.has_time-span $param.}
+UNION{$uri  crm:P4F.has_time-span $var0 . $var0 crm:P86F.falls_within $param.}
+ }
+
+
+ ]]></query>
+ </relation>

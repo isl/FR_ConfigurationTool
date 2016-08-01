@@ -1,0 +1,9 @@
+E70.Thing--(F4F.is_composed_of)[0,n] -> E70.Thing :
+{E70.Thing -- P16B.was_used_for-> E7.Activity:
+{ E7.Activity -- (P9B.forms_part_of)[0,n] -> E5.Event:
+{E7.Activity-- P14F.carried_out_by-> E39.Actor:
+{E39.Actor -- (P107B.is_current_or_former_member_of )[0,n]  -> E39.Actor 
+}
+}
+}
+}

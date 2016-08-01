@@ -1,0 +1,10 @@
+E39.Actor -- (P107B.is_current_or_former_member_of)[0,n]-> E39.Actor:
+{E21.Person--P98B.was_born -> E67.Birth:
+{E67.Birth--{P97F.from_father OR P96F.by_mother}->E21.Person
+ }
+OR
+E74.Group -- P95B.was_formed_by ->E66.Formation :
+{E66.Formation-- (P9F.consists_of)[0,n]-> E7.Activity:
+{ E7.Activity--P14F.carried_out_by-> E39.Actor:
+{E39.Actor --(P107B.is_current_or_former_member_of)[0,n]-> E39.Actor
+}}}}

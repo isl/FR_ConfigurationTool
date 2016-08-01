@@ -1,0 +1,58 @@
+select distinct $StartVar $Label { 
+$StartVar  rdf:type crm:E70.Thing.
+optional { $StartVar crmdig:L4F.has_preferred_label $Label. }{
+{$StartVar  crm:P51F.has_former_or_current_owner $Endvar.}
+UNION{$StartVar  crm:P51F.has_former_or_current_owner $var0. $var0 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var1.
+{ $var1 crm:P51F.has_former_or_current_owner $Endvar.}
+UNION{ $var1 crm:P51F.has_former_or_current_owner $var2. $var2 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:P24B.changed_ownership_through $var3.
+{ $var3 crm:P22F.transferred_title_to $Endvar.}
+UNION{ $var3 crm:P22F.transferred_title_to $var4. $var4 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var5.
+ $var5 crm:P24B.changed_ownership_through $var6.
+{ $var6 crm:P22F.transferred_title_to $Endvar.}
+UNION{ $var6 crm:P22F.transferred_title_to $var7. $var7 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+{ { $StartVar crm:P92B.was_brought_into_existence_by $var8.
+}UNION{ $StartVar crm:P16B.was_used_for $var8.
+}UNION{ $StartVar crm:P39B.was_measured_by $var8.
+}UNION{ $StartVar crm:P31B.was_modified_by $var8.}
+}
+UNION{{ $StartVar crm:P92B.was_brought_into_existence_by $tempvar9
+}UNION{ $StartVar crm:P16B.was_used_for $tempvar9
+}UNION{ $StartVar crm:P39B.was_measured_by $tempvar9
+}UNION{ $StartVar crm:P31B.was_modified_by $tempvar9
+}$tempvar9 crm:P9B.forms_part_of $var8.}
+{ $var8 crm:P14F.carried_out_by $Endvar.}
+UNION{ $var8 crm:P14F.carried_out_by $var9. $var9 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+ UNION {  
+$StartVar  crm:F4F.is_composed_of $var10.
+{ { $var10 crm:P92B.was_brought_into_existence_by $var11.
+}UNION{ $var10 crm:P16B.was_used_for $var11.
+}UNION{ $var10 crm:P39B.was_measured_by $var11.
+}UNION{ $var10 crm:P31B.was_modified_by $var11.}
+}
+UNION{{ $var10 crm:P92B.was_brought_into_existence_by $tempvar12
+}UNION{ $var10 crm:P16B.was_used_for $tempvar12
+}UNION{ $var10 crm:P39B.was_measured_by $tempvar12
+}UNION{ $var10 crm:P31B.was_modified_by $tempvar12
+}$tempvar12 crm:P9B.forms_part_of $var11.}
+{ $var11 crm:P14F.carried_out_by $Endvar.}
+UNION{ $var11 crm:P14F.carried_out_by $var12. $var12 crm:P107B.is_current_or_former_member_of $Endvar.}
+ }
+
+}

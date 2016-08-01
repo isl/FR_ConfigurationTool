@@ -1,0 +1,33 @@
+E53.Place--(P89B.contains)[0,n]  -> E53.Place:
+{E53.Place-- P53B.is_former_or_current_location_of -> E24.Physical_Man-Made_Thing:
+{E24.Physical_Man-Made_Thing -- P62F.depicts ->E39.Actor:
+{E39.Actor --(P107F.has_current_or_former_member)[0,n]->
+E39.Actor
+}
+OR
+E24.Physical_Man-Made_Thing --P128F.carries-> E73.Information_Object:
+{E73.Information_Object -- P67F.refers_to->E39.Actor:
+{E39.Actor --(P107F.has_current_or_former_member)[0,n]->
+E39.Actor 
+}}}
+OR 
+E53.Place-- P7B.witnessed-> E5.Event:
+{ E5.Event --(P9F.consists_of)[0,n]-> E5.Event:
+{E65.Creation -- P94F.has_created-> E89.Propositional_Object:
+{ E89.Propositional_Object --P67F.refers_to  -> E39.Actor:
+{E39.Actor --(P107F.has_current_or_former_member)[0,n]->
+E39.Actor
+}
+}
+OR
+E12.Production  -- P108F.has_produced -> E24.Physical_Man-Made_Thing:
+{E24.Physical_Man-Made_Thing -- P62F.depicts ->E39.Actor:
+{E39.Actor --(P107F.has_current_or_former_member)[0,n]->
+E39.Actor
+}
+OR
+E24.Physical_Man-Made_Thing --P128F.carries-> E73.Information_Object:
+{E73.Information_Object -- P67F.refers_to ->E39.Actor:
+{E39.Actor --(P107F.has_current_or_former_member)[0,n]->
+E39.Actor
+}}}}}}

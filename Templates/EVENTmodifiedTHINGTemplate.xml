@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <relation>
+ <subject>Event</subject>
+ <object>Thing</object>
+ <name>modified</name>
+ <label>modified</label>
+ <query>
+<![CDATA[  
+{
+$uri  crm:P9F.consists_of $var1.
+{ $var1 crm:P31F.has_modified $param.}
+UNION{ $var1 crm:P31F.has_modified $var2 . $var2 crm:F4F.is_composed_of $param.}
+ }
+
+ UNION {  
+{$uri  crm:P31F.has_modified $param.}
+UNION{$uri  crm:P31F.has_modified $var0 . $var0 crm:F4F.is_composed_of $param.}
+ }
+
+
+ ]]></query>
+ </relation>

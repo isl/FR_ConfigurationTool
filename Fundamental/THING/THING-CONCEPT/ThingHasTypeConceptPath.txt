@@ -1,0 +1,23 @@
+E70.Thing -- (F4F.is_composed_of)[0,n]-> E70.Thing:
+{ E70.Thing -- P2F.has_type-> E55.Type:
+{E55.Type --{(P127F.has_broader_term)[0,n] OR (P2F.has_type)[0,n]}-> E55.Type
+}
+OR 
+E70.Thing --P45F. consists_of-> E57.Material:
+{ E57.Material --{(P127F.has_broader_term)[0,n] OR (P2F.has_type)[0,n]}-> E55.Type
+}
+OR
+E70.Thing -- P92B.was_brought_into_existence_by-> E7.Activity:
+{ E7.Activity --(P9B.forms_part_of)[0,n]->E7.Activity:
+{E7.Activity--P33F.used_specific_technique-> E29.Design_or_Procedure:
+{E29.Design_or_Procedure-- P68F.foresees_use_of-> E57.Material:
+{ E57.Material --{(P127F.has_broader_term)[0,n] OR (P2F.has_type)[0,n]}-> E55.Type
+}
+}
+OR
+E11.Modification -- P126F.employed -> E57.Material:
+{ E57.Material --{(P127F.has_broader_term)[0,n] OR (P2F.has_type)[0,n]}-> E55.Type
+}
+	}
+}
+}
